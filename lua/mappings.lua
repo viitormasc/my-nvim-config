@@ -20,7 +20,6 @@ map("n", "<C-u>", "<C-u>zz")
 
 map("x", "p", '"_dP')
 map({ "n", "x" }, "<leader>pa", [["0p]], { desc = "paste from yank register" })
-map("n", "<leader>t", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 map("n", "<leader>f", function()
   vim.lsp.buf.format()
 end)
@@ -449,5 +448,6 @@ end
 
 -- Add to your mappings
 map("n", "<leader>rn", rename_symbol_interactive, { desc = "Rename symbol interactively across project" })
---
 
+-- SymbolsOutline remap
+map({ 'n', 'v' }, '<leader>a', vim.cmd.SymbolsOutline)
