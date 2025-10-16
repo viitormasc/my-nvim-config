@@ -1,3 +1,5 @@
+local LazyVim = require('lazy')
+
 return {
   "hrsh7th/nvim-cmp",
   dependencies = {

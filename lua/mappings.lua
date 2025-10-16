@@ -451,3 +451,5 @@ map("n", "<leader>rn", rename_symbol_interactive, { desc = "Rename symbol intera
 
 -- SymbolsOutline remap
 map({ 'n', 'v' }, '<leader>a', vim.cmd.SymbolsOutline)
+
+map({ 'n', 'v' }, '<leader>ç', '<END>a')
