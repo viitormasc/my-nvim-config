@@ -70,6 +70,7 @@ return {
         "typescript",
         "tsx",
         "html",
+        "go",
         "css"
       },
 
