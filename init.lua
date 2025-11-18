@@ -80,6 +80,7 @@ end)
 local function setup_lsp()
   local lsp_dir = vim.fn.stdpath 'config' .. '/lua/lsp'
   local lsp_servers = {}
+  local capabilities = require('blink.cmp').get_lsp_capabilities()
 
   if vim.fn.isdirectory(lsp_dir) == 1 then
     for _, file in ipairs(vim.fn.readdir(lsp_dir)) do
@@ -89,6 +90,16 @@ local function setup_lsp()
       end
     end
   end
+
+  for _, server in ipairs(lsp_servers) do
+    if vim.lsp.config[server] then
+      vim.lsp.config[server] = vim.tbl_deep_extend("force",
+        vim.lsp.config[server],
+        { capabilities = capabilities }
+      )
+    end
+  end
+
 
   vim.lsp.enable(lsp_servers)
 end
