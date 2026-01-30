@@ -265,3 +265,30 @@ vim.api.nvim_create_autocmd("LspDetach", {
 vim.api.nvim_create_user_command("LspLog", function()
 	vim.cmd.edit(vim.lsp.log.get_filename())
 end, { desc = "Open lsp.log file" })
+
+
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+
+    if client and client.server_capabilities.signatureHelpProvider then
+      vim.lsp.buf_attach_client(args.buf, client.id)
+
+      vim.api.nvim_create_autocmd("CursorHoldI", {
+        buffer = args.buf,
+        callback = function()
+          vim.lsp.buf.signature_help()
+        end,
+      })
+    end
+  end,
+-- callback = function()
+--   local col = vim.fn.col(".") - 1
+--   if col <= 0 then return end
+--
+--   local char = vim.fn.getline("."):sub(col, col)
+--   if char == "(" or char == "," then
+--     vim.lsp.buf.signature_help()
+--   end
+-- end
+})

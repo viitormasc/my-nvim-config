@@ -127,11 +127,23 @@ local function create_console_log()
   -- Get the word under cursor
   local word = vim.fn.expand "<cword>"
 
-  -- Get current line number
-  local current_line = vim.api.nvim_win_get_cursor(0)[1]
+  local fileType = vim.bo.filetype
 
+  local console 
+  if fileType == "javascript" or fileType== "ts" or fileType =="typescriptreact" or fileType=="javascriptreact" then
+   console = "console.log" 
+  elseif fileType == "go" then
+    console = "fmt.Println"
+  elseif fileType == "lua" then 
+    console = "log"
+  end 
+
+  -- Get current line number
+  --
+  local current_line = vim.api.nvim_win_get_cursor(0)[1]
+  -- print("console",console)
   -- Create the console.log statement
-  local log_line = "console.log('" .. word .. "', " .. word .. ");"
+  local log_line = console .. ' ("' .. word .. '", ' .. word .. ');'
 
   -- Insert the line after current line
   vim.api.nvim_buf_set_lines(0, current_line, current_line, false, { log_line })
@@ -142,65 +154,65 @@ end
 
 -- Add to your mappings
 map("n", "<leader>cl", create_console_log, { desc = "Create console.log for word under cursor" })
-
-local function format_and_save()
-  -- Get all active LSP clients
-  local clients = vim.lsp.get_active_clients()
-  local format_clients = {}
-
-  -- Filter clients that support formatting and are not the problematic ESLint client
-  for _, client in ipairs(clients) do
-    if client.supports_method "textDocument/formatting" then
-      -- Skip the problematic ESLint client if it exists
-      if client.name ~= "eslint" and client.name ~= "" then
-        table.insert(format_clients, client)
-      end
-    end
-  end
-
-  -- Run TSTools commands for TypeScript/JavaScript files
-  local filetype = vim.bo.filetype
-  if filetype == "typescript" or filetype == "typescriptreact" or filetype == "javascript" or filetype == "javascriptreact" then
-    -- Add missing imports
-    local ok_add, result_add = pcall(vim.cmd, "TSToolsAddMissingImports")
-    if not ok_add then
-      print("TSToolsAddMissingImports failed: " .. tostring(result_add))
-    end
-
-    -- Organize imports (sort and remove unused)
-    local ok_org, result_org = pcall(vim.cmd, "TSToolsOrganizeImports")
-    if not ok_org then
-      print("TSToolsOrganizeImports failed: " .. tostring(result_org))
-    end
-  end
-
-  if #format_clients > 0 then
-    -- Format using LSP with error handling, filtering out eslint
-    local ok, result = pcall(function()
-      vim.lsp.buf.format {
-        async = false,
-        filter = function(client)
-          return client.name ~= "eslint" and client.name ~= ""
-        end,
-      }
-    end)
-
-    if ok then
-      vim.cmd "w"
-      print "Formatted and saved"
-    else
-      print("LSP formatting failed: " .. tostring(result))
-      vim.cmd "w" -- Save anyway if formatting fails
-    end
-  else
-    -- Fallback: just save if no LSP formatting available
-    vim.cmd "w"
-    print "No LSP formatter available - just saved"
-  end
-end
-
-map({ "n", "i", "v" }, "<C-s>", format_and_save, { desc = "Format and save document" })
-
+--
+-- local function format_and_save()
+--   -- Get all active LSP clients
+--   local clients = vim.lsp.get_active_clients()
+--   local format_clients = {}
+--
+--   -- Filter clients that support formatting and are not the problematic ESLint client
+--   for _, client in ipairs(clients) do
+--     if client.supports_method "textDocument/formatting" then
+--       -- Skip the problematic ESLint client if it exists
+--       if client.name ~= "eslint" and client.name ~= "" then
+--         table.insert(format_clients, client)
+--       end
+--     end
+--   end
+--
+--   -- Run TSTools commands for TypeScript/JavaScript files
+--   local filetype = vim.bo.filetype
+--   if filetype == "typescript" or filetype == "typescriptreact" or filetype == "javascript" or filetype == "javascriptreact" then
+--     -- Add missing imports
+--     local ok_add, result_add = pcall(vim.cmd, "TSToolsAddMissingImports")
+--     if not ok_add then
+--       print("TSToolsAddMissingImports failed: " .. tostring(result_add))
+--     end
+--
+--     -- Organize imports (sort and remove unused)
+--     local ok_org, result_org = pcall(vim.cmd, "TSToolsOrganizeImports")
+--     if not ok_org then
+--       print("TSToolsOrganizeImports failed: " .. tostring(result_org))
+--     end
+--   end
+--
+--   if #format_clients > 0 then
+--     -- Format using LSP with error handling, filtering out eslint
+--     local ok, result = pcall(function()
+--       vim.lsp.buf.format {
+--         async = false,
+--         filter = function(client)
+--           return client.name ~= "eslint" and client.name ~= ""
+--         end,
+--       }
+--     end)
+--
+--     if ok then
+--       vim.cmd "w"
+--       print "Formatted and saved"
+--     else
+--       print("LSP formatting failed: " .. tostring(result))
+--       vim.cmd "w" -- Save anyway if formatting fails
+--     end
+--   else
+--     -- Fallback: just save if no LSP formatting available
+--     vim.cmd "w"
+--     print "No LSP formatter available - just saved"
+--   end
+-- end
+--
+-- map({ "n", "i", "v" }, "<C-s>", format_and_save, { desc = "Format and save document" })
+--
 local function rename_symbol_interactive()
   -- Get the current word under cursor
   local old_name = vim.fn.expand "<cword>"
@@ -453,3 +465,9 @@ map("n", "<leader>rn", rename_symbol_interactive, { desc = "Rename symbol intera
 map({ 'n', 'v' }, '<leader>a', vim.cmd.SymbolsOutline)
 
 map({ 'n', 'v' }, '<leader>ç', '<END>a')
+
+
+map('n','<leader>ct','<cmd>Copilot toggle_auto_trigger<CR>', { desc = "Toggle Copilot Auto Trigger" })
+
+-- nnoremap <F12>f :exe ':silent !firefox %'<CR>
+

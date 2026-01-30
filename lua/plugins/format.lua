@@ -12,7 +12,12 @@ return {
         html = { "prettier" },
         lua = { "stylua" },
       },
-      format_on_save = { lsp_fallback = true, timeout_ms = 1000 },
+      format_on_save = function(bufnr)
+        if vim.bo[bufnr].filetype == "lua" then
+          return false
+        end
+        return { lsp_fallback = true, timeout_ms = 1000 }
+      end,
     },
   },
 }

@@ -1,5 +1,4 @@
 -- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/eslint.lua
-
 local ROOT_MARKERS = {
 	".eslintrc",
 	".eslintrc.cjs",

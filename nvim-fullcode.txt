@@ -1,0 +1,4378 @@
+Directory Tree:
+nvim/
+│   ├── .git/ [EXCLUDED]
+│   ├── lua/
+│   │   ├── configs/
+│   │   │   ├── conform.lua
+│   │   │   ├── dap.lua
+│   │   │   ├── formatter.lua
+│   │   │   ├── lazy.lua
+│   │   │   ├── lint.lua
+│   │   │   ├── luasnipconfig.lua
+│   │   │   ├── null-ls.lua
+│   │   │   ├── react.lua
+│   │   ├── lsp/
+│   │   │   ├── basedpyright.lua
+│   │   │   ├── bashls.lua
+│   │   │   ├── css_variables.lua
+│   │   │   ├── cssls.lua
+│   │   │   ├── cssmodules_ls.lua
+│   │   │   ├── dockerls.lua
+│   │   │   ├── eslint.lua
+│   │   │   ├── gopls.lua
+│   │   │   ├── harper_ls.lua
+│   │   │   ├── html.lua
+│   │   │   ├── jsonls.lua
+│   │   │   ├── lua_ls.lua
+│   │   │   ├── nushell.lua
+│   │   │   ├── prisma-language-server.lua
+│   │   │   ├── pyright.lua
+│   │   │   ├── yamlls.lua
+│   │   ├── plugins/
+│   │   │   ├── autocmds/
+│   │   │   │   ├── aut-close-buffer-if-deleted.lua
+│   │   │   │   ├── lsp-attach.lua
+│   │   │   │   ├── show-cursorline-only-active.lua
+│   │   │   ├── autocomplete.lua
+│   │   │   ├── autotag.lua
+│   │   │   ├── blink.lua
+│   │   │   ├── caddyfile.lua
+│   │   │   ├── colorizer.lua
+│   │   │   ├── copilot-chat.lua
+│   │   │   ├── copilot.lua
+│   │   │   ├── dap.lua
+│   │   │   ├── diagnostics.lua
+│   │   │   ├── eslint.lua
+│   │   │   ├── flash.lua
+│   │   │   ├── format.lua
+│   │   │   ├── init.lua
+│   │   │   ├── lspconfig.lua
+│   │   │   ├── luasnip.lua
+│   │   │   ├── matchup.lua
+│   │   │   ├── neomongo.lua
+│   │   │   ├── null-ls.lua
+│   │   │   ├── nvimCmp.lua
+│   │   │   ├── oklch-colorizer.lua
+│   │   │   ├── rest.lua
+│   │   │   ├── snippets.lua
+│   │   │   ├── surround.lua
+│   │   │   ├── symbols-outline.lua
+│   │   │   ├── tailwind.lua
+│   │   │   ├── textObjects.lua
+│   │   │   ├── trouble.lua
+│   │   │   ├── typescript-tools.lua
+│   │   │   ├── undotree.lua
+│   │   │   ├── various-objects.lua
+│   │   │   ├── vim-tmux-navigator.lua
+│   │   ├── prompts/
+│   │   │   ├── aggrid.md
+│   │   │   ├── angular.md
+│   │   │   ├── ansible.md
+│   │   │   ├── architect.md
+│   │   │   ├── aws.md
+│   │   │   ├── chattitle.md
+│   │   │   ├── commit.md
+│   │   │   ├── commitwork.md
+│   │   │   ├── css.md
+│   │   │   ├── docker.md
+│   │   │   ├── electron.md
+│   │   │   ├── explain.md
+│   │   │   ├── fix.md
+│   │   │   ├── implement.md
+│   │   │   ├── js.md
+│   │   │   ├── lua.md
+│   │   │   ├── microbit.md
+│   │   │   ├── neovim.md
+│   │   │   ├── nushell.md
+│   │   │   ├── optimize.md
+│   │   │   ├── playwright.md
+│   │   │   ├── python.md
+│   │   │   ├── react.md
+│   │   │   ├── reactnative.md
+│   │   │   ├── reacttest.md
+│   │   │   ├── refactor.md
+│   │   │   ├── review.md
+│   │   │   ├── rust.md
+│   │   │   ├── storybook.md
+│   │   │   ├── tests.md
+│   │   │   ├── ts.md
+│   │   │   ├── tstest.md
+│   │   │   ├── vimscript.md
+│   │   ├── autocmds.lua
+│   │   ├── chadrc.lua
+│   │   ├── mappings.lua
+│   │   ├── options.lua
+│   ├── pack/
+│   │   ├── github/
+│   │   │   ├── start/
+│   │   │   │   ├── copilot.vim/
+│   │   │   │   │   ├── .git/ [EXCLUDED]
+│   │   │   │   │   ├── .github/
+│   │   │   │   │   │   ├── workflows/
+│   │   │   │   │   │   │   ├── auto-close-pr.yml
+│   │   │   │   │   │   ├── pull_request_template.md
+│   │   │   │   │   ├── autoload/
+│   │   │   │   │   │   ├── copilot/
+│   │   │   │   │   │   │   ├── client.vim
+│   │   │   │   │   │   │   ├── handlers.vim
+│   │   │   │   │   │   │   ├── job.vim
+│   │   │   │   │   │   │   ├── logger.vim
+│   │   │   │   │   │   │   ├── panel.vim
+│   │   │   │   │   │   │   ├── util.vim
+│   │   │   │   │   │   │   ├── version.vim
+│   │   │   │   │   │   ├── copilot.vim
+│   │   │   │   │   ├── copilot-language-server/
+│   │   │   │   │   │   ├── dist/ [EXCLUDED]
+│   │   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── doc/
+│   │   │   │   │   │   ├── copilot.txt
+│   │   │   │   │   ├── lua/
+│   │   │   │   │   │   ├── _copilot.lua
+│   │   │   │   │   ├── plugin/
+│   │   │   │   │   │   ├── copilot.vim
+│   │   │   │   │   ├── syntax/
+│   │   │   │   │   │   ├── copilotlog.vim
+│   │   │   │   │   │   ├── copilotpanel.vim
+│   │   │   │   │   ├── .gitattributes
+│   │   │   │   │   ├── .gitignore
+│   │   │   │   │   ├── LICENSE.md
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── SECURITY.md
+│   ├── .stylua.toml
+│   ├── LICENSE
+│   ├── README.md
+│   ├── init.lua
+│   ├── lazy-lock.json
+
+
+
+
+# ======================
+# File: .stylua.toml
+# ======================
+
+column_width = 180
+line_endings = "Unix"
+indent_type = "Spaces"
+indent_width = 2
+quote_style = "AutoPreferSingle"
+call_parentheses = "None"
+
+
+# ======================
+# File: README.md
+# ======================
+
+**This repo is supposed to be used as config by NvChad users!**
+
+- The main nvchad repo (NvChad/NvChad) is used as a plugin by this repo.
+- So you just import its modules , like `require "nvchad.options" , require "nvchad.mappings"`
+- So you can delete the .git from this repo ( when you clone it locally ) or fork it :)
+
+# Credits
+
+1) Lazyvim starter https://github.com/LazyVim/starter as nvchad's starter was inspired by Lazyvim's . It made a lot of things easier!
+
+
+# ======================
+# File: init.lua
+# ======================
+
+-- vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
+-- vim.g.mapleader = " "
+--
+-- -- bootstrap lazy and all plugins
+-- local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
+--
+-- if not vim.uv.fs_stat(lazypath) then
+--   local repo = "https://github.com/folke/lazy.nvim.git"
+--   vim.fn.system { "git", "clone", "--filter=blob:none", repo, "--branch=stable", lazypath }
+-- end
+--
+-- vim.opt.rtp:prepend(lazypath)
+--
+-- local lazy_config = require "configs.lazy"
+--
+-- -- load plugins
+-- require("lazy").setup({
+--   {
+--     "NvChad/NvChad",
+--     lazy = false,
+--     branch = "v2.5",
+--     import = "nvchad.plugins",
+--   },
+--
+--   { import = "plugins" },
+-- }, lazy_config)
+--
+-- -- load theme
+-- dofile(vim.g.base46_cache .. "defaults")
+-- dofile(vim.g.base46_cache .. "statusline")
+--
+-- require "options"
+-- require "autocmds"
+--
+-- vim.schedule(function()
+--   require "mappings"
+-- end)
+vim.g.base46_cache = vim.fn.stdpath 'data' .. '/base46/'
+vim.g.mapleader = ' '
+
+-- bootstrap lazy and all plugins
+local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
+
+if not vim.uv.fs_stat(lazypath) then
+  local repo = 'https://github.com/folke/lazy.nvim.git'
+  vim.fn.system { 'git', 'clone', '--filter=blob:none', repo, '--branch=stable', lazypath }
+end
+
+vim.opt.rtp:prepend(lazypath)
+
+local lazy_config = require 'configs.lazy'
+
+-- load plugins
+require('lazy').setup({
+  {
+    'NvChad/NvChad',
+    lazy = false,
+    branch = 'v2.5',
+    import = 'nvchad.plugins',
+  },
+  {
+    { 'nvim-treesitter/nvim-treesitter', branch = 'master', lazy = false, build = ':TSUpdate' },
+  },
+  { import = 'plugins' },
+}, lazy_config)
+
+-- load theme
+dofile(vim.g.base46_cache .. 'defaults')
+dofile(vim.g.base46_cache .. 'statusline')
+
+vim.o.relativenumber = true
+
+require 'options'
+require 'autocmds'
+
+vim.schedule(function()
+  require 'mappings'
+end)
+
+local function setup_lsp()
+  local lsp_dir = vim.fn.stdpath 'config' .. '/lua/lsp'
+  local lsp_servers = {}
+  local capabilities = require('blink.cmp').get_lsp_capabilities()
+
+  if vim.fn.isdirectory(lsp_dir) == 1 then
+    for _, file in ipairs(vim.fn.readdir(lsp_dir)) do
+      if file:match '%.lua$' and file ~= 'init.lua' then
+        local server_name = file:gsub('%.lua$', '')
+        table.insert(lsp_servers, server_name)
+      end
+    end
+  end
+
+  for _, server in ipairs(lsp_servers) do
+    if vim.lsp.config[server] then
+      vim.lsp.config[server] = vim.tbl_deep_extend("force",
+        vim.lsp.config[server],
+        { capabilities = capabilities }
+      )
+    end
+  end
+
+
+  vim.lsp.enable(lsp_servers)
+end
+
+setup_lsp()
+
+
+
+# ======================
+# File: lazy-lock.json
+# ======================
+
+{
+  "CopilotChat.nvim": { "branch": "main", "commit": "df5376c132382dd47e3e552612940cbf25b3580c" },
+  "LuaSnip": { "branch": "master", "commit": "5a1e39223db9a0498024a77b8441169d260c8c25" },
+  "NvChad": { "branch": "v2.5", "commit": "eb209a4a82aecabe609d8206b865e00a760fb644" },
+  "base46": { "branch": "v3.0", "commit": "45b336ec52615dd1a3aa47848d894616dd6293a5" },
+  "blink.cmp": { "branch": "main", "commit": "b19413d214068f316c78978b08264ed1c41830ec" },
+  "conform.nvim": { "branch": "master", "commit": "ffe26e8df8115c9665d24231f8a49fadb2d611ce" },
+  "copilot.lua": { "branch": "master", "commit": "881f99b827d65b41f522eecc21b112cf518028ac" },
+  "copilot.vim": { "branch": "release", "commit": "f89e977c87180519ba3b942200e3d05b17b1e2fc" },
+  "flash.nvim": { "branch": "main", "commit": "fcea7ff883235d9024dc41e638f164a450c14ca2" },
+  "friendly-snippets": { "branch": "main", "commit": "572f5660cf05f8cd8834e096d7b4c921ba18e175" },
+  "gitsigns.nvim": { "branch": "main", "commit": "5813e4878748805f1518cee7abb50fd7205a3a48" },
+  "indent-blankline.nvim": { "branch": "master", "commit": "005b56001b2cb30bfa61b7986bc50657816ba4ba" },
+  "lazy.nvim": { "branch": "main", "commit": "85c7ff3711b730b4030d03144f6db6375044ae82" },
+  "mason.nvim": { "branch": "main", "commit": "57e5a8addb8c71fb063ee4acda466c7cf6ad2800" },
+  "menu": { "branch": "main", "commit": "7a0a4a2896b715c066cfbe320bdc048091874cc6" },
+  "minty": { "branch": "main", "commit": "aafc9e8e0afe6bf57580858a2849578d8d8db9e0" },
+  "neomongo.nvim": { "branch": "main", "commit": "2d1092a6794e25848119d739b35b28f48601dfbe" },
+  "nui.nvim": { "branch": "main", "commit": "de740991c12411b663994b2860f1a4fd0937c130" },
+  "null-ls.nvim": { "branch": "main", "commit": "0010ea927ab7c09ef0ce9bf28c2b573fc302f5a7" },
+  "nvim-autopairs": { "branch": "master", "commit": "7a2c97cccd60abc559344042fefb1d5a85b3e33b" },
+  "nvim-colorizer.lua": { "branch": "master", "commit": "81e676d3203c9eb6e4c0ccf1eba1679296ef923f" },
+  "nvim-dap": { "branch": "master", "commit": "5860c7c501eb428d3137ee22c522828d20cca0b3" },
+  "nvim-eslint": { "branch": "main", "commit": "491deac6d89a5c51013fa71b63c3cc093db15dde" },
+  "nvim-lspconfig": { "branch": "master", "commit": "9c923997123ff9071198ea3b594d4c1931fab169" },
+  "nvim-surround": { "branch": "main", "commit": "fcfa7e02323d57bfacc3a141f8a74498e1522064" },
+  "nvim-tree.lua": { "branch": "master", "commit": "59088b96a32ea47caf4976e164dbd88b86447fb7" },
+  "nvim-treesitter": { "branch": "master", "commit": "42fc28ba918343ebfd5565147a42a26580579482" },
+  "nvim-treesitter-textobjects": { "branch": "master", "commit": "5ca4aaa6efdcc59be46b95a3e876300cfead05ef" },
+  "nvim-ts-autotag": { "branch": "main", "commit": "c4ca798ab95b316a768d51eaaaee48f64a4a46bc" },
+  "nvim-various-textobjs": { "branch": "main", "commit": "76b7600777cb9cdb056915ffb833b0722fb182e9" },
+  "nvim-web-devicons": { "branch": "master", "commit": "8dcb311b0c92d460fac00eac706abd43d94d68af" },
+  "oklch-color-picker.nvim": { "branch": "master", "commit": "0c3c07a08c0f9c9272298d55a21e7a8829afe62d" },
+  "plenary.nvim": { "branch": "master", "commit": "b9fd5226c2f76c951fc8ed5923d85e4de065e509" },
+  "rest.nvim": { "branch": "main", "commit": "5466d1e447fc4b038ef511a7a2c4c7cbb13da01a" },
+  "symbols-outline.nvim": { "branch": "master", "commit": "564ee65dfc9024bdde73a6621820866987cbb256" },
+  "tailwind-tools": { "branch": "master", "commit": "fbe982901d4508b0dcd80e07addf0fcb6dab6c49" },
+  "telescope.nvim": { "branch": "master", "commit": "e69b434b968a33815e2f02a5c7bd7b8dd4c7d4b2" },
+  "tiny-inline-diagnostic.nvim": { "branch": "main", "commit": "38b06435305c30966b7ceb0a43e460dc43acaada" },
+  "trouble.nvim": { "branch": "main", "commit": "bd67efe408d4816e25e8491cc5ad4088e708a69a" },
+  "typescript-tools.nvim": { "branch": "master", "commit": "c2f5910074103705661e9651aa841e0d7eea9932" },
+  "ui": { "branch": "v3.0", "commit": "bea2af0a76c1098fac0988ad296aa028cad2a333" },
+  "undotree": { "branch": "master", "commit": "0f1c9816975b5d7f87d5003a19c53c6fd2ff6f7f" },
+  "vim-caddyfile": { "branch": "master", "commit": "6d60d5af0d73f20b88ec388a9d70188d55ed8223" },
+  "vim-matchup": { "branch": "master", "commit": "1c276e12b49a83c1bdca74351187b8adea5da4b9" },
+  "vim-tmux-navigator": { "branch": "master", "commit": "c45243dc1f32ac6bcf6068e5300f3b2b237e576a" },
+  "volt": { "branch": "main", "commit": "620de1321f275ec9d80028c68d1b88b409c0c8b1" },
+  "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" }
+}
+
+
+# ======================
+# File: lua/autocmds.lua
+# ======================
+
+require "nvchad.autocmds"
+-- Auto-start Tailwind CSS LSP when opening relevant files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact", "html" },
+  callback = function()
+    vim.schedule(function()
+      -- Check if Tailwind LSP is not already running
+      local clients = vim.lsp.get_active_clients({ name = "tailwindcss" })
+      if #clients == 0 then
+        vim.cmd("LspStart tailwindcss")
+        print("🚀 Tailwind CSS LSP started!")
+      end
+    end)
+  end,
+})
+
+-- Optional: Also start when opening Neovim if a relevant file is already open
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    vim.schedule(function()
+      local filetype = vim.bo.filetype
+      local relevant_ft = {
+        javascript = true,
+        javascriptreact = true,
+        typescript = true,
+        typescriptreact = true,
+        html = true
+      }
+
+      if relevant_ft[filetype] then
+        local clients = vim.lsp.get_active_clients({ name = "tailwindcss" })
+        if #clients == 0 then
+          vim.cmd("LspStart tailwindcss")
+          print("🚀 Tailwind CSS LSP started!")
+        end
+      end
+    end)
+  end,
+})
+
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+  pattern = "*",
+  desc = "Prevent the overwriting of certain highlight groups by colorschemes",
+  callback = function()
+    vim.api.nvim_set_hl(0, "NormalFloat", {
+      link = "Normal",
+    })
+    vim.api.nvim_set_hl(0, "FloatBorder", {
+      bg = "none",
+    })
+
+    local error_float = vim.api.nvim_get_hl(0, { name = "ErrorFloat" })
+    error_float.bg = nil
+    error_float.ctermbg = nil
+
+    vim.api.nvim_set_hl(0, "ErrorFloat", error_float)
+
+    -- Clear italic from all highlight groups.. i hate italics
+    for _, group in ipairs(vim.fn.getcompletion("", "highlight")) do
+      local hl = vim.api.nvim_get_hl(0, { name = group, link = false })
+      if hl.italic then
+        hl.italic = false
+        vim.api.nvim_set_hl(0, group, hl)
+      end
+    end
+  end,
+})
+
+-- Funky go file behavior.
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "go",
+  callback = function()
+    vim.opt_local.shiftwidth = 4
+    vim.opt_local.tabstop = 4
+    vim.opt_local.expandtab = false
+  end,
+})
+
+-- Restart LSP when dependencies change.
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = { "cargo.toml" },
+  callback = function()
+    -- info_log("Restarting LSP.")
+    vim.cmd("LspRestart")
+  end,
+})
+
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(_)
+    -- info_log("LSP client successfully attached.")
+  end,
+})
+
+
+vim.api.nvim_create_autocmd("RecordingEnter", {
+  callback = function(ctx)
+    vim.opt.cmdheight = 1
+  end
+})
+
+vim.api.nvim_create_autocmd("RecordingLeave", {
+  callback = function()
+    vim.opt.cmdheight = 0
+  end
+})
+
+
+# ======================
+# File: lua/chadrc.lua
+# ======================
+
+-- This file needs to have same structure as nvconfig.lua
+-- https://github.com/NvChad/ui/blob/v3.0/lua/nvconfig.lua
+-- Please read that file to know all available options :(
+
+---@type ChadrcConfig
+local M = {}
+
+M.base46 = {
+  theme = "chocolate",
+  -- transparency = 0.85,
+
+  hl_override = {
+  	Comment = { italic = true },
+  	["@comment"] = { italic = true },
+  },
+}
+
+M.nvdash = { load_on_startup = true }
+M.ui = {
+      tabufline = {
+         enabled = false
+     }
+}
+
+return M
+
+
+# ======================
+# File: lua/configs/conform.lua
+# ======================
+
+local options = {
+  formatters_by_ft = {
+    lua = { "stylua" },
+    css = { "prettier" },
+    html = { "prettier" },
+  },
+
+  format_on_save = function(bufnr)
+    if vim.bo[bufnr].filetype == "lua" then
+      return false
+    end
+    return {
+      timeout_ms = 500,
+      lsp_fallback = true,
+    }
+  end,
+}
+
+return options
+
+
+# ======================
+# File: lua/configs/dap.lua
+# ======================
+
+local dap = require("dap")
+
+dap.adapters["pwa-node"] = {
+  type = "server",
+  host = "127.0.0.1",
+  port = 8123,
+  executable = {
+    command = "js-debug-adapter",
+  }
+}
+
+for _, language in ipairs { "typescript", "javascript" } do
+  dap.configurations[language] = {
+    {
+      type = "pwa-node",
+      request = "launch",
+      name = "Launch file",
+      program = "${file}",
+      cwd = "${workspaceFolder}",
+      runtimeExecutable = "node",
+    },
+  }
+end
+
+
+# ======================
+# File: lua/configs/formatter.lua
+# ======================
+
+local M = {
+  filetype = {
+    javascript = {
+      require('formatter.filetypes.javascript').prettier,
+    },
+    typescript = {
+      require('formatter.filetypes.typescript').prettier,
+    },
+    -- ["*"] = {
+    --   require("formatter.filetypes.any").remove_trailing_whitespace
+    -- }
+  },
+}
+
+vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
+  command = 'FormatWriteLock',
+})
+
+return M
+
+
+# ======================
+# File: lua/configs/lazy.lua
+# ======================
+
+return {
+  defaults = { lazy = true },
+  install = { colorscheme = { "nvchad" } },
+
+  ui = {
+    icons = {
+      ft = "",
+      lazy = "󰂠 ",
+      loaded = "",
+      not_loaded = "",
+    },
+  },
+
+  performance = {
+    rtp = {
+      disabled_plugins = {
+        "2html_plugin",
+        "tohtml",
+        "getscript",
+        "getscriptPlugin",
+        "gzip",
+        "logipat",
+        "netrw",
+        "netrwPlugin",
+        "netrwSettings",
+        "netrwFileHandlers",
+        "matchit",
+        "tar",
+        "tarPlugin",
+        "rrhelper",
+        "spellfile_plugin",
+        "vimball",
+        "vimballPlugin",
+        "zip",
+        "zipPlugin",
+        "tutor",
+        "rplugin",
+        "syntax",
+        "synmenu",
+        "optwin",
+        "compiler",
+        "bugreport",
+        "ftplugin",
+      },
+    },
+  },
+}
+
+
+# ======================
+# File: lua/configs/lint.lua
+# ======================
+
+require('lint').linters_by_ft = {
+  javascript = { "eslint" },
+  typescript = { "eslint" },
+}
+
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+  callback = function()
+    require("lint").try_lint()
+  end,
+})
+
+
+# ======================
+# File: lua/configs/luasnipconfig.lua
+# ======================
+
+local luasnip = require "luasnip"
+luasnip.filetype_extend("javascript", { "javascriptreact" })
+luasnip.filetype_extend("javascript", { "typescript" })
+luasnip.filetype_extend("javascript", { "typescriptreact" })
+luasnip.filetype_extend("typescript", { "typescriptreact" })
+luasnip.filetype_extend("javascript", { "html" })
+luasnip.filetype_extend("typescript", { "html" })
+require("luasnip/loaders/from_vscode").lazy_load()
+
+
+# ======================
+# File: lua/configs/null-ls.lua
+# ======================
+
+
+
+# ======================
+# File: lua/configs/react.lua
+# ======================
+
+local ls = require("luasnip")
+local s = ls.snippet
+local t = ls.text_node
+local i = ls.insert_node
+
+return {
+  s("mycomp", {
+    t("import React from 'react';"),
+    t({ "", "" }),
+    t("const "), i(1, "MyComponent"), t(" = () => {"),
+    t({ "", "  return (" }),
+    t({ "    <div>" }),
+    t({ "      <h1>" }), i(2, "Hello from Component"), t("</h1>"),
+    t({ "    </div>" }),
+    t({ "  );" }),
+    t({ "};" }),
+    t({ "" }, "export default "), i(1), t(";"),
+  }),
+}
+
+
+# ======================
+# File: lua/lsp/basedpyright.lua
+# ======================
+
+return {
+	cmd = {
+		"basedpyright-langserver",
+		"--stdio",
+	},
+	filetypes = {
+		"python",
+	},
+	root_markers = {
+		".git",
+		"Pipfile",
+		"pyproject.toml",
+		"pyrightconfig.json",
+		"requirements.txt",
+		"setup.cfg",
+		"setup.py",
+	},
+	-- https://microsoft.github.io/pyright/#/settings?id=pyright-settings
+	settings = {
+		pyright = {
+			strict = true,
+		},
+		python = {
+			analysis = {
+				autoSearchPaths = true,
+				useLibraryCodeForTypes = true,
+				diagnosticMode = "openFilesOnly",
+			},
+		},
+	},
+
+	single_file_support = true,
+}
+
+
+# ======================
+# File: lua/lsp/bashls.lua
+# ======================
+
+return {
+  cmd = {
+    "bash-language-server",
+    "start",
+  },
+
+  filetypes = {
+    "sh",
+    "bash",
+    "zsh",
+  },
+
+  root_markers = {
+    ".git",
+    ".bashrc",
+    ".bash_profile",
+    ".zshrc",
+    ".shellcheckrc",
+  },
+
+  settings = {
+    bashIde = {
+      globPattern = "*@(.sh|.inc|.bash|.command)",
+    },
+  },
+
+  single_file_support = true,
+}
+
+
+# ======================
+# File: lua/lsp/css_variables.lua
+# ======================
+
+-- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/css_variables.lua
+
+return {
+	cmd = {
+		"css-variables-language-server",
+		"--stdio",
+	},
+	filetypes = {
+		"css",
+		"less",
+		"scss",
+	},
+	root_markers = {
+		".git",
+		"package.json",
+	},
+	-- Same as inlined defaults that don't seem to work without hardcoding them in the lua config
+	-- https://github.com/vunguyentuan/vscode-css-variables/blob/763a564df763f17aceb5f3d6070e0b444a2f47ff/packages/css-variables-language-server/src/CSSVariableManager.ts#L31-L50
+	settings = {
+		cssVariables = {
+			lookupFiles = { "**/*.less", "**/*.scss", "**/*.sass", "**/*.css" },
+			blacklistFolders = {
+				"**/.cache",
+				"**/.DS_Store",
+				"**/.git",
+				"**/.hg",
+				"**/.next",
+				"**/.svn",
+				"**/bower_components",
+				"**/CVS",
+				"**/dist",
+				"**/node_modules",
+				"**/tests",
+				"**/tmp",
+			},
+		},
+	},
+}
+
+
+# ======================
+# File: lua/lsp/cssls.lua
+# ======================
+
+-- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/cssls.lua
+
+return {
+	cmd = {
+		"vscode-css-language-server",
+		"--stdio",
+	},
+	filetypes = {
+		"css",
+		"less",
+		"scss",
+	},
+	root_markers = {
+		".git",
+		"package.json",
+	},
+	settings = {
+		css = { validate = true },
+		scss = { validate = true },
+		less = { validate = true },
+	},
+
+	init_options = { provideFormatter = true }, -- needed to enable formatting capabilities
+	single_file_support = true,
+}
+
+
+# ======================
+# File: lua/lsp/cssmodules_ls.lua
+# ======================
+
+-- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/cssmodules_ls.lua
+
+return {
+	cmd = {
+		"cssmodules-language-server",
+	},
+	filetypes = {
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+	},
+	root_markers = {
+		"package.json",
+	},
+	root_dir = function(bufnr, on_dir)
+		local filename = vim.api.nvim_buf_get_name(bufnr)
+		-- Only attach if there's a corresponding *.module.scss or *.module.css file.
+		local has_module = vim.fs.find(
+			{ filename:gsub("%.tsx?$", ".module.scss"), filename:gsub("%.tsx?$", ".module.css") },
+			{ path = filename }
+		)
+		if #has_module == 0 then
+			return nil
+		end
+
+		-- Only attach if there's some package.json in the root directory.
+		local root_dir = vim.fs.dirname(vim.fs.find("package.json", { path = filename, upward = true })[1])
+		if not root_dir then
+			return nil
+		end
+
+		on_dir(root_dir)
+	end,
+}
+
+
+# ======================
+# File: lua/lsp/dockerls.lua
+# ======================
+
+-- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/dockerls.lua
+
+return {
+	cmd = {
+		"docker-langserver",
+		"--stdio",
+	},
+	filetypes = {
+		"dockerfile",
+	},
+	root_markers = {
+		".git",
+		"Dockerfile",
+	},
+
+	single_file_support = true,
+}
+
+
+# ======================
+# File: lua/lsp/eslint.lua
+# ======================
+
+-- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/eslint.lua
+local ROOT_MARKERS = {
+	".eslintrc",
+	".eslintrc.cjs",
+	".eslintrc.js",
+	".eslintrc.json",
+	".eslintrc.yaml",
+	".eslintrc.yml",
+	"eslint.config.cjs",
+	"eslint.config.cts",
+	"eslint.config.js",
+	"eslint.config.mjs",
+	"eslint.config.mts",
+	"eslint.config.ts",
+}
+
+return {
+	cmd = {
+		"vscode-eslint-language-server",
+		"--stdio",
+	},
+	filetypes = {
+		"javascript",
+		"javascript.jsx",
+		"javascriptreact",
+		"typescript",
+		"typescript.tsx",
+		"typescriptreact",
+	},
+	root_markers = ROOT_MARKERS,
+	root_dir = function(bufnr, on_dir)
+		local filename = vim.api.nvim_buf_get_name(bufnr)
+		-- Only attach if there's some eslint config file in the root directory.
+		local root_dir = vim.fs.dirname(vim.fs.find(ROOT_MARKERS, { path = filename, upward = true })[1])
+		if not root_dir then
+			return nil
+		end
+
+		on_dir(root_dir)
+	end,
+	-- https://github.com/Microsoft/vscode-eslint#settings-options
+	settings = {
+		validate = "on",
+		packageManager = nil,
+		useESLintClass = false,
+		experimental = {
+			useFlatConfig = false,
+		},
+		codeActionOnSave = {
+			enable = false,
+			mode = "all",
+		},
+		format = true,
+		quiet = false,
+		onIgnoredFiles = "off",
+		rulesCustomizations = {},
+		run = "onType",
+		problems = {
+			shortenToSingleLine = false,
+		},
+		-- nodePath configures the directory in which the eslint server should start its node_modules resolution.
+		-- This path is relative to the workspace folder (root dir) of the server instance.
+		nodePath = "",
+		-- Use the workspace folder location or the file location (if no workspace folder is open) as the working directory
+		workingDirectory = { mode = "location" },
+		codeAction = {
+			disableRuleComment = {
+				enable = true,
+				location = "separateLine",
+			},
+			showDocumentation = {
+				enable = true,
+			},
+		},
+	},
+	on_new_config = function(config, new_root_dir)
+		-- The "workspaceFolder" is a VSCode concept. It limits how far the
+		-- server will traverse the file system when locating the ESLint config
+		-- file (e.g., .eslintrc).
+		config.settings.workspaceFolder = {
+			uri = new_root_dir,
+			name = vim.fn.fnamemodify(new_root_dir, ":t"),
+		}
+
+		-- Support flat config
+		if
+			vim.fn.filereadable(new_root_dir .. "/eslint.config.js") == 1
+			or vim.fn.filereadable(new_root_dir .. "/eslint.config.mjs") == 1
+			or vim.fn.filereadable(new_root_dir .. "/eslint.config.cjs") == 1
+			or vim.fn.filereadable(new_root_dir .. "/eslint.config.ts") == 1
+			or vim.fn.filereadable(new_root_dir .. "/eslint.config.mts") == 1
+			or vim.fn.filereadable(new_root_dir .. "/eslint.config.cts") == 1
+		then
+			config.settings.experimental.useFlatConfig = true
+		end
+
+		-- Support Yarn2 (PnP) projects
+		local pnp_cjs = new_root_dir .. "/.pnp.cjs"
+		local pnp_js = new_root_dir .. "/.pnp.js"
+		if vim.loop.fs_stat(pnp_cjs) or vim.loop.fs_stat(pnp_js) then
+			config.cmd = vim.list_extend({ "yarn", "exec" }, config.cmd)
+		end
+	end,
+	handlers = {
+		["eslint/openDoc"] = function(_, result)
+			if result then
+				vim.ui.open(result.url)
+			end
+			return {}
+		end,
+		["eslint/confirmESLintExecution"] = function(_, result)
+			if not result then
+				return
+			end
+			return 4 -- approved
+		end,
+		["eslint/probeFailed"] = function()
+			vim.notify("[lspconfig] ESLint probe failed.", vim.log.levels.WARN)
+			return {}
+		end,
+		["eslint/noLibrary"] = function()
+			vim.notify("[lspconfig] Unable to find ESLint library.", vim.log.levels.WARN)
+			return {}
+		end,
+	},
+}
+
+
+# ======================
+# File: lua/lsp/gopls.lua
+# ======================
+
+return {
+  cmd          = { 'gopls' },
+  filetypes    = { 'go', 'gomod', 'gowork', 'gotmpl' },
+  root_markers = { 'go.work', 'go.mod', '.git' },
+  settings     = {
+    gopls = {
+      completeUnimported = true,
+      usePlaceholders = true,
+      analyses = {
+        unusedparams = true,
+      }
+    }
+  }
+}
+
+
+# ======================
+# File: lua/lsp/harper_ls.lua
+# ======================
+
+-- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/harper_ls.lua
+
+return {
+	cmd = {
+		"harper-ls",
+		"--stdio",
+	},
+	root_markers = {
+		".git",
+	},
+	-- https://writewithharper.com/docs/integrations/language-server#Configuration
+	settings = {
+		["harper-ls"] = {
+			diagnosticSeverity = "hint",
+			userDictPath = vim.o.spellfile,
+			markdown = {
+				IgnoreLinkTitle = true,
+			},
+			linters = {
+				sentenceCapitalization = true,
+			},
+			isolateEnglish = true,
+			dialect = "British",
+		},
+	},
+
+	single_file_support = true,
+}
+
+
+# ======================
+# File: lua/lsp/html.lua
+# ======================
+
+-- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/html.lua
+
+return {
+	cmd = {
+		"vscode-html-language-server",
+		"--stdio",
+	},
+	filetypes = {
+		"html",
+		"templ",
+	},
+	root_markers = {
+		"package.json",
+		".git",
+	},
+	single_file_support = true,
+	settings = {},
+	init_options = {
+		provideFormatter = true,
+		embeddedLanguages = { css = true, javascript = true },
+		configurationSection = { "html", "css", "javascript" },
+	},
+}
+
+
+# ======================
+# File: lua/lsp/jsonls.lua
+# ======================
+
+-- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/jsonls.lua
+
+return {
+	cmd = {
+		"vscode-json-language-server",
+		"--stdio",
+	},
+	filetypes = {
+		"json",
+		"jsonc",
+	},
+	root_markers = {
+		".git",
+	},
+
+	init_options = { provideFormatter = true },
+	single_file_support = true,
+}
+
+
+# ======================
+# File: lua/lsp/lua_ls.lua
+# ======================
+
+-- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/lua_ls.lua
+
+return {
+	cmd = {
+		"lua-language-server",
+	},
+	filetypes = {
+		"lua",
+	},
+	root_markers = {
+		".git",
+		".luacheckrc",
+		".luarc.json",
+		".luarc.jsonc",
+		".stylua.toml",
+		"selene.toml",
+		"selene.yml",
+		"stylua.toml",
+	},
+	settings = {
+		Lua = {
+			diagnostics = {
+				disable = { "missing-parameters", "missing-fields" },
+			},
+			workspace = {
+				library = vim.api.nvim_get_runtime_file("", true),
+			},
+		},
+	},
+
+	format_on_save = false,
+	single_file_support = true,
+	log_level = vim.lsp.protocol.MessageType.Warning,
+}
+
+
+# ======================
+# File: lua/lsp/nushell.lua
+# ======================
+
+-- https://raw.githubusercontent.com/neovim/nvim-lspconfig/refs/heads/master/lsp/nushell.lua
+
+return {
+	cmd = {
+		"nu",
+		"--lsp",
+	},
+	filetypes = {
+		"nu",
+	},
+	root_dir = function(bufnr, on_dir)
+		on_dir(vim.fs.root(bufnr, { ".git" }) or vim.fs.dirname(vim.api.nvim_buf_get_name(bufnr)))
+	end,
+}
+
+
+# ======================
+# File: lua/lsp/prisma-language-server.lua
+# ======================
+
+-- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/lua_ls.lua
+local util = require 'lspconfig.util'
+
+return {
+  default_config = {
+    cmd = { 'prisma-language-server', '--stdio' },
+    filetypes = { 'prisma' },
+    settings = {
+      prisma = {
+        prismaFmtBinPath = '',
+      },
+    },
+    root_dir = util.root_pattern('.git', 'package.json'),
+  },
+  docs = {
+    description = [[
+Language Server for the Prisma JavaScript and TypeScript ORM
+
+`@prisma/language-server` can be installed via npm
+```sh
+npm install -g @prisma/language-server
+```
+]],
+  },
+}
+
+
+# ======================
+# File: lua/lsp/pyright.lua
+# ======================
+
+-- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/pyright.lua
+
+return {
+	cmd = {
+		"pyright-langserver",
+		"--stdio",
+	},
+	filetypes = {
+		"python",
+	},
+	root_markers = {
+		".git",
+		"Pipfile",
+		"pyproject.toml",
+		"pyrightconfig.json",
+		"requirements.txt",
+		"setup.cfg",
+		"setup.py",
+	},
+	-- https://microsoft.github.io/pyright/#/settings?id=pyright-settings
+	settings = {
+		pyright = {
+			strict = true,
+		},
+		python = {
+			analysis = {
+				autoSearchPaths = true,
+				useLibraryCodeForTypes = true,
+				diagnosticMode = "openFilesOnly",
+			},
+		},
+	},
+
+	single_file_support = true,
+}
+
+
+# ======================
+# File: lua/lsp/yamlls.lua
+# ======================
+
+-- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/yamlls.lua
+
+return {
+	cmd = {
+		"yaml-language-server",
+		"--stdio",
+	},
+	filetypes = {
+		"yaml",
+		"yaml.docker-compose",
+		"yaml.gitlab",
+	},
+	root_markers = {
+		".git",
+	},
+	settings = {
+		-- https://github.com/redhat-developer/vscode-redhat-telemetry#how-to-disable-telemetry-reporting
+		redhat = { telemetry = { enabled = false } },
+	},
+
+	single_file_support = true,
+}
+
+
+# ======================
+# File: lua/mappings.lua
+# ======================
+
+require "nvchad.mappings"
+
+-- add yours here
+
+local map = vim.keymap.set
+
+map("n", ";", ":", { desc = "CMD enter command mode" })
+
+map("i", "jk", "<ESC>")
+map("i", "jj", "<ESC>")
+map("n", "<leader>u", vim.cmd.UndotreeToggle)
+
+map("n", "<A-j>", ":m .+1<CR>==")     -- move line up(n)
+map("n", "<A-k>", ":m .-2<CR>==")     -- move line down(n)
+map("v", "<A-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
+map("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
+
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
+
+map("x", "p", '"_dP')
+map({ "n", "x" }, "<leader>pa", [["0p]], { desc = "paste from yank register" })
+map("n", "<leader>f", function()
+  vim.lsp.buf.format()
+end)
+
+map("n", "<C-k>", "<cmd>cnext<CR>zz")
+map("n", "<C-j>", "<cmd>cprev<CR>zz")
+map("n", "<leader>k", "<cmd>lnext<CR>zz")
+map("n", "<leader>j", "<cmd>lprev<CR>zz")
+
+map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Remap arrow keys to show instructions
+vim.keymap.set({ "n", "v", "x" }, "<Up>", function()
+  vim.cmd 'echo "Press K to go up"'
+end, { noremap = true })
+
+vim.keymap.set({ "n", "v", "x" }, "<Down>", function()
+  vim.cmd 'echo "Press J to go down"'
+end, { noremap = true })
+
+vim.keymap.set({ "n", "v", "x" }, "<Left>", function()
+  vim.cmd 'echo "Press H to go left"'
+end, { noremap = true })
+
+vim.keymap.set({ "n", "v", "x" }, "<Right>", function()
+  vim.cmd 'echo "Press L to go right"'
+end, { noremap = true })
+
+map("n", "[", "O<ESC>")
+map("n", "]", "o<ESC>")
+
+-- CUSTOM SCRIPTS --
+vim.fn.setreg("l", "yoconsole.log('^[pa:^[la, ^[pl)")
+
+-- make i start indented
+vim.cmd [[function! IndentWithI()
+    if len(getline('.')) == 0
+        return "\"_cc"
+    else
+        return "i"
+    endif
+endfunction
+nnoremap <expr> i IndentWithI()]]
+
+-- replace '' or " " with ``
+
+local function replace_quotes_with_backticks()
+  local line = vim.api.nvim_get_current_line()
+  local cursor_pos = vim.api.nvim_win_get_cursor(0)
+  local col = cursor_pos[2] + 1 -- 1-based column
+  -- Check what quotes we can find
+  local single_quotes = {}
+  local double_quotes = {}
+  -- Find all single quotes
+  for i = 1, #line do
+    if line:sub(i, i) == "'" and (i == 1 or line:sub(i - 1, i - 1) ~= "\\") then
+      table.insert(single_quotes, i)
+    end
+  end
+  -- Find all double quotes
+  for i = 1, #line do
+    if line:sub(i, i) == '"' and (i == 1 or line:sub(i - 1, i - 1) ~= "\\") then
+      table.insert(double_quotes, i)
+    end
+  end
+  -- Simple logic: find if cursor is between any quote pair
+  local function is_between_quotes(quotes)
+    for i = 1, #quotes - 1, 2 do
+      local start = quotes[i]
+      local end_pos = quotes[i + 1]
+      if start and end_pos and col > start and col < end_pos then
+        return start, end_pos
+      end
+    end
+    return nil, nil
+  end
+  local start_single, end_single = is_between_quotes(single_quotes)
+  local start_double, end_double = is_between_quotes(double_quotes)
+  if start_single and end_single then
+    local new_line = line:sub(1, start_single - 1)
+        .. "`"
+        .. line:sub(start_single + 1, end_single - 1)
+        .. "`"
+        .. line:sub(end_single + 1)
+    vim.api.nvim_set_current_line(new_line)
+  elseif start_double and end_double then
+    local new_line = line:sub(1, start_double - 1)
+        .. "`"
+        .. line:sub(start_double + 1, end_double - 1)
+        .. "`"
+        .. line:sub(end_double + 1)
+    vim.api.nvim_set_current_line(new_line)
+  else
+  end
+end
+
+map("n", "<leader>'", replace_quotes_with_backticks, { desc = "Replace quotes with backticks" }) -- Simple alternate buffer switching
+
+-- Make we switch fast between our current and last buffer
+
+map("n", "<Tab>", "<C-^>", { desc = "Switch to alternate buffer" })
+map("n", "<S-Tab>", "<cmd>bnext<CR>", { desc = "Next buffer" })
+
+local function create_console_log()
+  -- Get the word under cursor
+  local word = vim.fn.expand "<cword>"
+
+  local fileType = vim.bo.filetype
+
+  local console 
+  if fileType == "javascript" or fileType== "ts" or fileType =="typescriptreact" or fileType=="javascriptreact" then
+   console = "console.log" 
+  elseif fileType == "go" then
+    console = "fmt.Println"
+  elseif fileType == "lua" then 
+    console = "log"
+  end 
+
+  -- Get current line number
+  --
+  local current_line = vim.api.nvim_win_get_cursor(0)[1]
+  -- print("console",console)
+  -- Create the console.log statement
+  local log_line = console .. ' ("' .. word .. '", ' .. word .. ');'
+
+  -- Insert the line after current line
+  vim.api.nvim_buf_set_lines(0, current_line, current_line, false, { log_line })
+
+  -- Move cursor to the new line
+  vim.api.nvim_win_set_cursor(0, { current_line + 1, 0 })
+end
+
+-- Add to your mappings
+map("n", "<leader>cl", create_console_log, { desc = "Create console.log for word under cursor" })
+--
+-- local function format_and_save()
+--   -- Get all active LSP clients
+--   local clients = vim.lsp.get_active_clients()
+--   local format_clients = {}
+--
+--   -- Filter clients that support formatting and are not the problematic ESLint client
+--   for _, client in ipairs(clients) do
+--     if client.supports_method "textDocument/formatting" then
+--       -- Skip the problematic ESLint client if it exists
+--       if client.name ~= "eslint" and client.name ~= "" then
+--         table.insert(format_clients, client)
+--       end
+--     end
+--   end
+--
+--   -- Run TSTools commands for TypeScript/JavaScript files
+--   local filetype = vim.bo.filetype
+--   if filetype == "typescript" or filetype == "typescriptreact" or filetype == "javascript" or filetype == "javascriptreact" then
+--     -- Add missing imports
+--     local ok_add, result_add = pcall(vim.cmd, "TSToolsAddMissingImports")
+--     if not ok_add then
+--       print("TSToolsAddMissingImports failed: " .. tostring(result_add))
+--     end
+--
+--     -- Organize imports (sort and remove unused)
+--     local ok_org, result_org = pcall(vim.cmd, "TSToolsOrganizeImports")
+--     if not ok_org then
+--       print("TSToolsOrganizeImports failed: " .. tostring(result_org))
+--     end
+--   end
+--
+--   if #format_clients > 0 then
+--     -- Format using LSP with error handling, filtering out eslint
+--     local ok, result = pcall(function()
+--       vim.lsp.buf.format {
+--         async = false,
+--         filter = function(client)
+--           return client.name ~= "eslint" and client.name ~= ""
+--         end,
+--       }
+--     end)
+--
+--     if ok then
+--       vim.cmd "w"
+--       print "Formatted and saved"
+--     else
+--       print("LSP formatting failed: " .. tostring(result))
+--       vim.cmd "w" -- Save anyway if formatting fails
+--     end
+--   else
+--     -- Fallback: just save if no LSP formatting available
+--     vim.cmd "w"
+--     print "No LSP formatter available - just saved"
+--   end
+-- end
+--
+-- map({ "n", "i", "v" }, "<C-s>", format_and_save, { desc = "Format and save document" })
+--
+local function rename_symbol_interactive()
+  -- Get the current word under cursor
+  local old_name = vim.fn.expand "<cword>"
+  if not old_name or old_name == "" then
+    print "No word under cursor"
+    return
+  end
+
+  -- Ask for new name
+  local new_name = vim.fn.input("New name for " .. old_name .. ": ", old_name)
+  if new_name == "" or new_name == old_name then
+    print "Rename cancelled or no change"
+    return
+  end
+
+  -- Use ripgrep with no filtering
+  local cmd = "rg -n -w --no-ignore --hidden '"
+      .. old_name
+      .. "' --glob '*.lua' --glob '*.js' --glob '*.ts' --glob '*.jsx' --glob '*.tsx' 2>/dev/null"
+  local handle = io.popen(cmd)
+  local results = handle:read "*a"
+  handle:close()
+
+  if not results or results == "" then
+    print("No occurrences found for: " .. old_name)
+    -- Try a more aggressive search
+    local cmd2 =
+        "find . -name '*.lua' -o -name '*.js' -o -name '*.ts' -o -name '*.jsx' -o -name '*.tsx' | xargs grep -n -w '"
+        .. old_name
+        .. "' 2>/dev/null | head -50"
+    local handle2 = io.popen(cmd2)
+    local results2 = handle2:read "*a"
+    handle2:close()
+
+    if results2 and results2 ~= "" then
+      print "Found with find+grep:"
+      results = results2
+    else
+      return
+    end
+  end
+
+  -- Parse results
+  local occurrences = {}
+  for line in results:gmatch "[^\r\n]+" do
+    local file, line_num, content = line:match "([^:]+):(%d+):(.+)"
+    if file and line_num then
+      table.insert(occurrences, {
+        file = file,
+        line = tonumber(line_num),
+        content = content,
+      })
+    end
+  end
+
+  if #occurrences == 0 then
+    print "No valid occurrences found"
+    return
+  end
+
+  print("Found " .. #occurrences .. " occurrences of '" .. old_name .. "'")
+
+  -- Set up yellow highlight
+  vim.cmd "highlight RenameHighlight guibg=Yellow guifg=Black"
+
+  -- Clear screen for better visibility
+  vim.cmd 'echo ""'
+  vim.cmd "redraw"
+
+  -- Disable LSP temporarily to avoid errors
+  local lsp_clients = vim.lsp.get_active_clients()
+  local disabled_lsp = {}
+
+  for _, client in ipairs(lsp_clients) do
+    if client.name == "eslint" then
+      vim.lsp.stop_client(client.id)
+      table.insert(disabled_lsp, client.name)
+    end
+  end
+
+  if #disabled_lsp > 0 then
+    print("Temporarily disabled LSP: " .. table.concat(disabled_lsp, ", "))
+  end
+
+  -- Process each occurrence
+  local changed_count = 0
+  local skipped_count = 0
+  local cancelled = false
+
+  for i, occ in ipairs(occurrences) do
+    if cancelled then
+      break
+    end
+
+    -- Open the file in edit mode automatically
+    local success, err = pcall(function()
+      vim.cmd("edit " .. occ.file)
+      vim.api.nvim_win_set_cursor(0, { occ.line, 0 })
+    end)
+
+    if not success then
+      print("Could not open: " .. occ.file)
+      skipped_count = skipped_count + 1
+      goto continue
+    end
+
+    -- Find the exact position of the word on this line
+    local line_content = vim.api.nvim_get_current_line()
+    local start_pos, end_pos = line_content:find(old_name)
+
+    if not start_pos then
+      -- Try with word boundaries
+      start_pos, end_pos = line_content:find("\\b" .. old_name .. "\\b")
+    end
+
+    if start_pos then
+      -- Move cursor to the word
+      vim.api.nvim_win_set_cursor(0, { occ.line, start_pos - 1 })
+
+      -- Highlight the word using yellow background
+      local ns = vim.api.nvim_create_namespace "rename_highlight"
+      vim.api.nvim_buf_clear_namespace(0, ns, 0, -1)
+      vim.api.nvim_buf_add_highlight(0, ns, "RenameHighlight", occ.line - 1, start_pos - 1, start_pos - 1 + #old_name)
+
+      -- Center the screen
+      vim.cmd "normal! zz"
+
+      -- Clear and show clean interface
+      vim.cmd 'echo ""'
+      vim.cmd "redraw"
+
+      -- Show context with better formatting
+      print("╭─ " .. string.format("Occurrence %d/%d", i, #occurrences) .. " " .. string.rep("─", 50))
+      print("│ File: " .. occ.file .. ":" .. occ.line)
+      print("│ Context: " .. line_content)
+      print(
+        "│ "
+        .. string.rep(" ", start_pos - 1)
+        .. string.rep("^", #old_name)
+        .. " ← This word (highlighted in yellow)"
+      )
+      print("╰─ " .. string.rep("─", 50))
+
+      -- Ask for confirmation with 'c' option
+      local answer
+      local input_success, input_err = pcall(function()
+        answer = vim.fn.input("Change '" .. old_name .. "' to '" .. new_name .. "'? (y/n/a/q/c): ")
+      end)
+
+      if not input_success then
+        print "Input cancelled due to LSP error, continuing..."
+        answer = "n"
+      end
+
+      -- Clear highlight
+      vim.api.nvim_buf_clear_namespace(0, ns, 0, -1)
+
+      if answer:lower() == "y" then
+        -- Replace at exact position
+        local before = line_content:sub(1, start_pos - 1)
+        local after = line_content:sub(end_pos + 1)
+        local new_line = before .. new_name .. after
+        vim.api.nvim_set_current_line(new_line)
+
+        -- Safe save without triggering LSP
+        vim.cmd "noautocmd write"
+        changed_count = changed_count + 1
+        print "✓ Changed"
+      elseif answer:lower() == "n" then
+        skipped_count = skipped_count + 1
+        print "✗ Skipped"
+      elseif answer:lower() == "a" then
+        -- Change all remaining
+        for j = i, #occurrences do
+          local remaining_occ = occurrences[j]
+          local success2 = pcall(function()
+            vim.cmd("edit " .. remaining_occ.file)
+            vim.api.nvim_win_set_cursor(0, { remaining_occ.line, 0 })
+            local rem_line_content = vim.api.nvim_get_current_line()
+            local rem_start, rem_end = rem_line_content:find(old_name)
+            if not rem_start then
+              rem_start, rem_end = rem_line_content:find("\\b" .. old_name .. "\\b")
+            end
+            if rem_start then
+              local rem_before = rem_line_content:sub(1, rem_start - 1)
+              local rem_after = rem_line_content:sub(rem_end + 1)
+              local rem_new_line = rem_before .. new_name .. rem_after
+              vim.api.nvim_set_current_line(rem_new_line)
+              vim.cmd "noautocmd write"
+            end
+          end)
+          if not success2 then
+            print("Could not process: " .. remaining_occ.file)
+          end
+        end
+        changed_count = changed_count + (#occurrences - i + 1)
+        print "✓ Changed all remaining"
+        break
+      elseif answer:lower() == "q" then
+        print "Rename cancelled"
+        break
+      elseif answer:lower() == "c" then
+        -- Cancel and revert changes made so far
+        print "❌ Operation cancelled - reverting changes..."
+        cancelled = true
+
+        -- Revert changes in current file if it was modified
+        if vim.bo.modified then
+          vim.cmd "edit!" -- Reload without saving changes
+        end
+        break
+      else
+        skipped_count = skipped_count + 1
+        print "✗ Skipped (invalid input)"
+      end
+    else
+      print("Word not found at expected position in: " .. occ.file .. ":" .. occ.line)
+      skipped_count = skipped_count + 1
+    end
+
+    -- Clear screen between occurrences
+    vim.cmd 'echo ""'
+    vim.cmd "redraw"
+
+    ::continue::
+  end
+
+  -- Clear any remaining highlights
+  local ns = vim.api.nvim_create_namespace "rename_highlight"
+  vim.api.nvim_buf_clear_namespace(0, ns, 0, -1)
+
+  -- Final summary
+  vim.cmd 'echo ""'
+  if cancelled then
+    print("❌ Rename cancelled - " .. changed_count .. " changes were reverted")
+  else
+    print("✅ Rename completed: " .. changed_count .. " changed, " .. skipped_count .. " skipped")
+  end
+
+  -- Restart LSP servers
+  if #disabled_lsp > 0 then
+    print "LSP servers will restart automatically on next file operation"
+  end
+end
+
+-- Add to your mappings
+map("n", "<leader>rn", rename_symbol_interactive, { desc = "Rename symbol interactively across project" })
+
+-- SymbolsOutline remap
+map({ 'n', 'v' }, '<leader>a', vim.cmd.SymbolsOutline)
+
+map({ 'n', 'v' }, '<leader>ç', '<END>a')
+
+
+map('n','<leader>ct','<cmd>Copilot toggle_auto_trigger<CR>', { desc = "Toggle Copilot Auto Trigger" })
+
+-- nnoremap <F12>f :exe ':silent !firefox %'<CR>
+
+
+
+# ======================
+# File: lua/options.lua
+# ======================
+
+require "nvchad.options"
+
+-- add yours here!
+
+-- local o = vim.o
+-- o.cursorlineopt ='both' -- to enable cursorline!
+
+
+# ======================
+# File: lua/plugins/autocmds/aut-close-buffer-if-deleted.lua
+# ======================
+
+-- Autocmds for LSP attach/detach events
+
+local augroup = vim.api.nvim_create_augroup("ruicsh/autocmds/lsp-attach", { clear = true })
+
+local DISABLE_FILETYPES = {
+	"DiffviewFileHistory",
+	"DiffviewFiles",
+	"checkhealth",
+	"diff",
+	"fugitive",
+	"git",
+	"gitcommit",
+	"help",
+	"lazy",
+	"lspinfo",
+	"oil",
+}
+
+-- Configure diagnostics
+local function diagnostics()
+	vim.diagnostic.config({
+		float = {
+			border = "rounded",
+			width = 60,
+		},
+		jump = {
+			float = true,
+		},
+		severity_sort = true,
+		signs = {
+			text = {
+				[vim.diagnostic.severity.ERROR] = "E",
+				[vim.diagnostic.severity.WARN] = "W",
+				[vim.diagnostic.severity.INFO] = "I",
+				[vim.diagnostic.severity.HINT] = "H",
+				[vim.diagnostic.severity.N] = "H",
+			},
+		},
+		underline = true,
+		update_in_insert = false,
+		virtual_lines = false,
+	})
+
+	local k = vim.keymap.set
+
+	local function jump_to_error(direction)
+		return function()
+			local count = direction == "next" and 1 or -1
+			local opts = { count = count, severity = vim.diagnostic.severity.ERROR, float = true }
+			vim.diagnostic.jump(opts)
+		end
+	end
+
+	k("n", "[x", jump_to_error("prev"), { desc = "Jump to previous error", silent = true })
+	k("n", "]x", jump_to_error("next"), { desc = "Jump to next error", silent = true })
+end
+
+-- Jump to prev/next reference
+local function jump_to_references(bufnr, client)
+	local methods = vim.lsp.protocol.Methods
+
+	local k = function(keys, func, desc)
+		vim.keymap.set("n", keys, func, { buffer = bufnr, desc = "LSP: " .. desc })
+	end
+
+	if client:supports_method(methods.textDocument_references) then
+		-- Cache the current word and references list
+		local current_word = nil
+		local cache_items = nil
+
+		local function find_ajdacent_reference(items, direction)
+			if direction == "first" then
+				return 1
+			end
+
+			if direction == "last" then
+				return #items
+			end
+
+			-- Find the current reference based on cursor position
+			local current_ref = 1
+			local lnum = vim.fn.line(".")
+			local col = vim.fn.col(".")
+			for i, item in ipairs(items) do
+				if item.lnum == lnum and item.col == col then
+					current_ref = i
+					break
+				end
+			end
+
+			-- Calculate the adjacent reference based on direction
+			local adjacent_ref = current_ref
+			local delta = direction == "next" and 1 or -1
+			adjacent_ref = math.min(#items, current_ref + delta)
+			if adjacent_ref < 1 then
+				adjacent_ref = 1
+			end
+
+			return adjacent_ref
+		end
+
+		local function jump_to_reference(direction)
+			return function()
+				-- Make sure we're at the beginning of the current word
+				vim.cmd("normal! eb")
+
+				-- If we are jumping on the same word, we can use the cached list
+				if current_word == vim.fn.expand("<cword>") then
+					local adjacent_ref = find_ajdacent_reference(cache_items, direction)
+					vim.cmd("ll " .. adjacent_ref)
+					return
+				end
+
+				vim.lsp.buf.references(nil, {
+					on_list = function(options)
+						-- Filter out references that are not in the current buffer
+						local current_filename = vim.api.nvim_buf_get_name(0):lower()
+						if vim.fn.has("win32") == 1 then
+							current_filename = current_filename:gsub("/", "\\")
+						end
+						local items = vim.tbl_filter(function(item)
+							return item.filename:lower() == current_filename
+						end, options.items)
+
+						-- No references found in the current buffer
+						if #items == 0 then
+							vim.notify("No references found", vim.log.levels.WARN)
+							vim.fn.setloclist(0, {}, "r", { items = {} })
+							current_word = nil
+							cache_items = nil
+							return
+						end
+
+						-- Cache the current word and items for later use
+						current_word = vim.fn.expand("<cword>")
+						cache_items = items
+
+						-- Set the quickfix list and jump to the adjacent reference
+						vim.fn.setloclist(0, {}, "r", { items = items })
+						local adjacent_ref = find_ajdacent_reference(cache_items, direction)
+						vim.cmd("ll " .. adjacent_ref)
+					end,
+				})
+			end
+		end
+
+		k("[r", jump_to_reference("prev"), "Jump to previous reference")
+		k("]r", jump_to_reference("next"), "Jump to next reference")
+		k("[R", jump_to_reference("first"), "Jump to first reference")
+		k("]R", jump_to_reference("last"), "Jump to last reference")
+	end
+end
+
+-- Set keymaps for LSP
+local function keymaps(bufnr, client)
+	local snacks = require("snacks")
+	local methods = vim.lsp.protocol.Methods
+
+	local k = function(keys, func, desc, mode)
+		mode = mode or "n"
+		vim.keymap.set(mode, keys, func, { buffer = bufnr, desc = "LSP: " .. desc })
+	end
+
+	local function hover()
+		-- https://neovim.io/doc/user/lsp.html#vim.lsp.buf.hover.Opts
+		vim.lsp.buf.hover({
+			border = "rounded",
+			focusable = false,
+			close_events = { "CursorMoved", "InsertEnter", "FocusLost" },
+		})
+	end
+
+	-- https://neovim.io/doc/user/lsp.html#lsp-defaults
+	k("gd", vim.lsp.buf.definition, "Jump to definition")
+	k("<cr>", vim.lsp.buf.definition, "Jump to definition")
+	k("<c-]>", vim.lsp.buf.definition, "Jump to definition")
+	k("<c-w>]", "<c-w>o<c-w>v<c-]><c-w>L", "Jump to definition (vsplit)") -- `:h CTRL-]`
+	k("gD", vim.lsp.buf.declaration, "Jump to declaration")
+	k("grr", snacks.picker.lsp_references, "References")
+	k("gO", snacks.picker.lsp_symbols, "Symbols")
+	k("<leader>dD", snacks.picker.diagnostics, "Diagnostics: Workspace")
+	k("<leader>dd", snacks.picker.diagnostics_buffer, "Diagnostics: File")
+	k("K", hover, "Hover")
+
+	-- Jump to type implementation
+	if client:supports_method(methods.textDocument_typeDefinition) then
+		k("grt", vim.lsp.buf.type_definition, "Jump to type definition")
+	end
+
+	-- Jump to symbol references
+	jump_to_references(bufnr, client)
+end
+
+-- Highlight all references to symbol under cursor
+local function highlight_references(bufnr, client)
+	local methods = vim.lsp.protocol.Methods
+
+	if not client:supports_method(methods.textDocument_documentHighlight) then
+		return
+	end
+
+	vim.api.nvim_create_autocmd({ "CursorHold", "InsertLeave" }, {
+		buffer = bufnr,
+		group = augroup,
+		callback = vim.lsp.buf.document_highlight,
+		desc = "Highlight references under the cursor",
+	})
+
+	vim.api.nvim_create_autocmd({ "CursorMoved", "InsertEnter", "BufLeave" }, {
+		buffer = bufnr,
+		group = augroup,
+		callback = vim.lsp.buf.clear_references,
+		desc = "Clear highlight references",
+	})
+end
+
+-- Clear highlight references event handlers
+local function clear_highlight_references(bufnr, client)
+	local methods = vim.lsp.protocol.Methods
+
+	if client:supports_method(methods.textDocument_documentHighlight) then
+		vim.api.nvim_clear_autocmds({
+			group = augroup,
+			event = { "BufLeave", "CursorHold", "CursorMoved", "InsertEnter", "InsertLeave" },
+			buffer = bufnr,
+		})
+	end
+end
+
+vim.api.nvim_create_autocmd("LspAttach", {
+	group = augroup,
+	pattern = "*",
+	callback = function(event)
+		local bufnr = event.buf
+		local client = vim.lsp.get_client_by_id(event.data.client_id)
+		if not client then
+			return
+		end
+
+		-- Skip certain filetypes
+		local filetype = vim.bo[bufnr].filetype
+		if vim.tbl_contains(DISABLE_FILETYPES, filetype) then
+			return
+		end
+
+		diagnostics()
+		keymaps(bufnr, client)
+		highlight_references(bufnr, client)
+	end,
+})
+
+vim.api.nvim_create_autocmd("LspDetach", {
+	group = augroup,
+	callback = function(event)
+		local bufnr = event.buf
+		local client = vim.lsp.get_client_by_id(event.data.client_id)
+		if not client then
+			return
+		end
+
+		clear_highlight_references(bufnr, client)
+	end,
+})
+
+vim.api.nvim_create_user_command("LspLog", function()
+	vim.cmd.edit(vim.lsp.log.get_filename())
+end, { desc = "Open lsp.log file" })
+
+
+# ======================
+# File: lua/plugins/autocmds/lsp-attach.lua
+# ======================
+
+-- Autocmds for LSP attach/detach events
+
+local augroup = vim.api.nvim_create_augroup("ruicsh/autocmds/lsp-attach", { clear = true })
+
+local DISABLE_FILETYPES = {
+	"DiffviewFileHistory",
+	"DiffviewFiles",
+	"checkhealth",
+	"diff",
+	"fugitive",
+	"git",
+	"gitcommit",
+	"help",
+	"lazy",
+	"lspinfo",
+	"oil",
+}
+
+-- Configure diagnostics
+local function diagnostics()
+	vim.diagnostic.config({
+		float = {
+			border = "rounded",
+			width = 60,
+		},
+		jump = {
+			float = true,
+		},
+		severity_sort = true,
+		signs = {
+			text = {
+				[vim.diagnostic.severity.ERROR] = "E",
+				[vim.diagnostic.severity.WARN] = "W",
+				[vim.diagnostic.severity.INFO] = "I",
+				[vim.diagnostic.severity.HINT] = "H",
+				[vim.diagnostic.severity.N] = "H",
+			},
+		},
+		underline = true,
+		update_in_insert = false,
+		virtual_lines = false,
+	})
+
+	local k = vim.keymap.set
+
+	local function jump_to_error(direction)
+		return function()
+			local count = direction == "next" and 1 or -1
+			local opts = { count = count, severity = vim.diagnostic.severity.ERROR, float = true }
+			vim.diagnostic.jump(opts)
+		end
+	end
+
+	k("n", "[x", jump_to_error("prev"), { desc = "Jump to previous error", silent = true })
+	k("n", "]x", jump_to_error("next"), { desc = "Jump to next error", silent = true })
+end
+
+-- Jump to prev/next reference
+local function jump_to_references(bufnr, client)
+	local methods = vim.lsp.protocol.Methods
+
+	local k = function(keys, func, desc)
+		vim.keymap.set("n", keys, func, { buffer = bufnr, desc = "LSP: " .. desc })
+	end
+
+	if client:supports_method(methods.textDocument_references) then
+		-- Cache the current word and references list
+		local current_word = nil
+		local cache_items = nil
+
+		local function find_ajdacent_reference(items, direction)
+			if direction == "first" then
+				return 1
+			end
+
+			if direction == "last" then
+				return #items
+			end
+
+			-- Find the current reference based on cursor position
+			local current_ref = 1
+			local lnum = vim.fn.line(".")
+			local col = vim.fn.col(".")
+			for i, item in ipairs(items) do
+				if item.lnum == lnum and item.col == col then
+					current_ref = i
+					break
+				end
+			end
+
+			-- Calculate the adjacent reference based on direction
+			local adjacent_ref = current_ref
+			local delta = direction == "next" and 1 or -1
+			adjacent_ref = math.min(#items, current_ref + delta)
+			if adjacent_ref < 1 then
+				adjacent_ref = 1
+			end
+
+			return adjacent_ref
+		end
+
+		local function jump_to_reference(direction)
+			return function()
+				-- Make sure we're at the beginning of the current word
+				vim.cmd("normal! eb")
+
+				-- If we are jumping on the same word, we can use the cached list
+				if current_word == vim.fn.expand("<cword>") then
+					local adjacent_ref = find_ajdacent_reference(cache_items, direction)
+					vim.cmd("ll " .. adjacent_ref)
+					return
+				end
+
+				vim.lsp.buf.references(nil, {
+					on_list = function(options)
+						-- Filter out references that are not in the current buffer
+						local current_filename = vim.api.nvim_buf_get_name(0):lower()
+						if vim.fn.has("win32") == 1 then
+							current_filename = current_filename:gsub("/", "\\")
+						end
+						local items = vim.tbl_filter(function(item)
+							return item.filename:lower() == current_filename
+						end, options.items)
+
+						-- No references found in the current buffer
+						if #items == 0 then
+							vim.notify("No references found", vim.log.levels.WARN)
+							vim.fn.setloclist(0, {}, "r", { items = {} })
+							current_word = nil
+							cache_items = nil
+							return
+						end
+
+						-- Cache the current word and items for later use
+						current_word = vim.fn.expand("<cword>")
+						cache_items = items
+
+						-- Set the quickfix list and jump to the adjacent reference
+						vim.fn.setloclist(0, {}, "r", { items = items })
+						local adjacent_ref = find_ajdacent_reference(cache_items, direction)
+						vim.cmd("ll " .. adjacent_ref)
+					end,
+				})
+			end
+		end
+
+		k("[r", jump_to_reference("prev"), "Jump to previous reference")
+		k("]r", jump_to_reference("next"), "Jump to next reference")
+		k("[R", jump_to_reference("first"), "Jump to first reference")
+		k("]R", jump_to_reference("last"), "Jump to last reference")
+	end
+end
+
+-- Set keymaps for LSP
+local function keymaps(bufnr, client)
+	local snacks = require("snacks")
+	local methods = vim.lsp.protocol.Methods
+
+	local k = function(keys, func, desc, mode)
+		mode = mode or "n"
+		vim.keymap.set(mode, keys, func, { buffer = bufnr, desc = "LSP: " .. desc })
+	end
+
+	local function hover()
+		-- https://neovim.io/doc/user/lsp.html#vim.lsp.buf.hover.Opts
+		vim.lsp.buf.hover({
+			border = "rounded",
+			focusable = false,
+			close_events = { "CursorMoved", "InsertEnter", "FocusLost" },
+		})
+	end
+
+	-- https://neovim.io/doc/user/lsp.html#lsp-defaults
+	k("gd", vim.lsp.buf.definition, "Jump to definition")
+	k("<cr>", vim.lsp.buf.definition, "Jump to definition")
+	k("<c-]>", vim.lsp.buf.definition, "Jump to definition")
+	k("<c-w>]", "<c-w>o<c-w>v<c-]><c-w>L", "Jump to definition (vsplit)") -- `:h CTRL-]`
+	k("gD", vim.lsp.buf.declaration, "Jump to declaration")
+	k("grr", snacks.picker.lsp_references, "References")
+	k("gO", snacks.picker.lsp_symbols, "Symbols")
+	k("<leader>dD", snacks.picker.diagnostics, "Diagnostics: Workspace")
+	k("<leader>dd", snacks.picker.diagnostics_buffer, "Diagnostics: File")
+	k("K", hover, "Hover")
+
+	-- Jump to type implementation
+	if client:supports_method(methods.textDocument_typeDefinition) then
+		k("grt", vim.lsp.buf.type_definition, "Jump to type definition")
+	end
+
+	-- Jump to symbol references
+	jump_to_references(bufnr, client)
+end
+
+-- Highlight all references to symbol under cursor
+local function highlight_references(bufnr, client)
+	local methods = vim.lsp.protocol.Methods
+
+	if not client:supports_method(methods.textDocument_documentHighlight) then
+		return
+	end
+
+	vim.api.nvim_create_autocmd({ "CursorHold", "InsertLeave" }, {
+		buffer = bufnr,
+		group = augroup,
+		callback = vim.lsp.buf.document_highlight,
+		desc = "Highlight references under the cursor",
+	})
+
+	vim.api.nvim_create_autocmd({ "CursorMoved", "InsertEnter", "BufLeave" }, {
+		buffer = bufnr,
+		group = augroup,
+		callback = vim.lsp.buf.clear_references,
+		desc = "Clear highlight references",
+	})
+end
+
+-- Clear highlight references event handlers
+local function clear_highlight_references(bufnr, client)
+	local methods = vim.lsp.protocol.Methods
+
+	if client:supports_method(methods.textDocument_documentHighlight) then
+		vim.api.nvim_clear_autocmds({
+			group = augroup,
+			event = { "BufLeave", "CursorHold", "CursorMoved", "InsertEnter", "InsertLeave" },
+			buffer = bufnr,
+		})
+	end
+end
+
+vim.api.nvim_create_autocmd("LspAttach", {
+	group = augroup,
+	pattern = "*",
+	callback = function(event)
+		local bufnr = event.buf
+		local client = vim.lsp.get_client_by_id(event.data.client_id)
+		if not client then
+			return
+		end
+
+		-- Skip certain filetypes
+		local filetype = vim.bo[bufnr].filetype
+		if vim.tbl_contains(DISABLE_FILETYPES, filetype) then
+			return
+		end
+
+		diagnostics()
+		keymaps(bufnr, client)
+		highlight_references(bufnr, client)
+	end,
+})
+
+vim.api.nvim_create_autocmd("LspDetach", {
+	group = augroup,
+	callback = function(event)
+		local bufnr = event.buf
+		local client = vim.lsp.get_client_by_id(event.data.client_id)
+		if not client then
+			return
+		end
+
+		clear_highlight_references(bufnr, client)
+	end,
+})
+
+vim.api.nvim_create_user_command("LspLog", function()
+	vim.cmd.edit(vim.lsp.log.get_filename())
+end, { desc = "Open lsp.log file" })
+
+
+# ======================
+# File: lua/plugins/autocmds/show-cursorline-only-active.lua
+# ======================
+
+-- Show cursor line only in active window.
+-- https://github.com/folke/dot/blob/master/nvim/lua/config/autocmds.lua
+
+local augroup = vim.api.nvim_create_augroup("ruicsh/autocmds/show-cursorline-only-active", { clear = true })
+
+vim.api.nvim_create_autocmd({ "InsertLeave", "WinEnter" }, {
+	group = augroup,
+	callback = function()
+		if vim.wo.previewwindow then
+			return
+		end
+
+		if vim.w.auto_cursorline then
+			vim.wo.cursorline = true
+			vim.w.auto_cursorline = false
+		end
+	end,
+})
+
+vim.api.nvim_create_autocmd({ "InsertEnter", "WinLeave" }, {
+	group = augroup,
+	callback = function()
+		if vim.wo.previewwindow then
+			return
+		end
+
+		if vim.wo.cursorline then
+			vim.w.auto_cursorline = true
+			vim.wo.cursorline = false
+		end
+	end,
+})
+
+
+# ======================
+# File: lua/plugins/autocomplete.lua
+# ======================
+
+return {
+  {
+    'saghen/blink.cmp',
+    dependencies = 'rafamadriz/friendly-snippets',
+
+    version = 'v0.*',
+
+    opts = {
+      -- list = { selection = { preselect = true } },
+      keymap = {
+        preset = 'super-tab', ---@type 'enter' | 'default' | 'super-tab' | 'none'
+        ['<CR>'] = { 'accept', 'fallback' },
+        ['<Tab>'] = {
+          function(cmp)
+            if cmp.snippet_active() then
+              return cmp.accept()
+            else
+              return cmp.select_next()
+            end
+          end,
+          'snippet_forward',
+          'fallback',
+        },
+        ['<S-Tab>'] = { 'select_prev', 'snippet_backward', 'fallback' },
+      },
+      appearance = {
+        use_nvim_cmp_as_default = true,
+        nerd_font_variant = 'mono',
+      },
+
+      signature = { enabled = true },
+    },
+  },
+}
+
+
+# ======================
+# File: lua/plugins/autotag.lua
+# ======================
+
+return {
+  "windwp/nvim-ts-autotag",
+  dependencies = { "nvim-treesitter/nvim-treesitter" },
+  lazy = false,
+  opts = {
+    enable_close = true,
+    enable_rename = true,
+    enable_close_on_slash = false
+  },
+  config = function(_, opts)
+    require("nvim-ts-autotag").setup(opts)
+  end,
+}
+
+
+# ======================
+# File: lua/plugins/blink.lua
+# ======================
+
+return { import = "nvchad.blink.lazyspec" } 
+
+
+# ======================
+# File: lua/plugins/caddyfile.lua
+# ======================
+
+return {
+  'isobit/vim-caddyfile',
+  lazy = false,
+}
+
+
+# ======================
+# File: lua/plugins/colorizer.lua
+# ======================
+
+return {
+  "catgoose/nvim-colorizer.lua",
+  event = "BufReadPre",
+  opts = {   -- set to setup table
+  },
+
+}
+
+
+# ======================
+# File: lua/plugins/copilot-chat.lua
+# ======================
+
+return {
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    dependencies = {
+      { "nvim-lua/plenary.nvim", branch = "master" },
+      { "github/copilot.vim" },
+    },
+    build = "make tiktoken",
+    opts = {
+      auto_suggestions = false,
+      auto_insert = false,
+      -- window = { layout = 'float' }
+      -- See Configuration section for options
+    },
+    keys = {
+      { "<leader>cc", ":CopilotChat<CR>",         mode = "n", desc = "Chat with Copilot" },
+      { "<leader>ce", ":CopilotChatExplain<CR>",  mode = "v", desc = "Explain Code" },
+      { "<leader>cr", ":CopilotChatReview<CR>",   mode = "v", desc = "Review Code" },
+      { "<leader>cf", ":CopilotChatFix<CR>",      mode = "v", desc = "Fix Code Issues" },
+      { "<leader>co", ":CopilotChatOptimize<CR>", mode = "v", desc = "Optimize Code" },
+      { "<leader>cd", ":CopilotChatDocs<CR>",     mode = "v", desc = "Generate Docs" },
+      { "<leader>ct", ":CopilotChatTests<CR>",    mode = "v", desc = "Generate Tests" },
+      { "<leader>cg", ":CopilotChatCommit<CR>",   mode = "n", desc = "Generate Commit Message" },
+      { "<leader>cx", ":CopilotChatCommit<CR>",   mode = "v", desc = "Generate Commit for Selection" },
+    },
+  },
+}
+
+
+# ======================
+# File: lua/plugins/copilot.lua
+# ======================
+
+return {
+  "zbirenbaum/copilot.lua",
+  opts = {
+    filetypes = {
+      ["."] = false,
+      css = true,
+      cvs = false,
+      gitcommit = false,
+      gitrebase = false,
+      help = false,
+      hgcommit = false,
+      markdown = false,
+      scss = false,
+      svn = false,
+      yaml = true,
+      go = false,
+      [""] = false,
+    },
+    panel = {
+      enabled = false,
+    },
+    suggestion = { 
+      -- auto_trigger = true,
+      keymap = {
+        accept = "<c-]>",
+        accept_word = "<a-]>",
+        accept_line = "<a-[>",
+        next = "<a-n>",
+        prev = "<a-p>",
+        dismiss = "<a-e>",
+        toggle_auto_trigger = "<a-c>",
+      },
+    },
+  },
+  config = function(_, opts)
+    local copilot = require("copilot")
+
+    copilot.setup(opts)
+  end,
+
+  cmd = "Copilot",
+  event = "InsertEnter",
+}
+
+
+
+# ======================
+# File: lua/plugins/dap.lua
+# ======================
+
+return {
+  "mfussenegger/nvim-dap",
+  config = function()
+    require "configs.dap"
+    -- require("core.utils").load_mappings("dap")
+  end
+}
+
+
+# ======================
+# File: lua/plugins/diagnostics.lua
+# ======================
+
+return {
+  "rachartier/tiny-inline-diagnostic.nvim",
+  event = "VeryLazy",
+  priority = 1000,
+  config = function()
+    require('tiny-inline-diagnostic').setup()
+    vim.diagnostic.config({ virtual_text = false }) -- Disable default virtual text
+  end
+}
+
+
+# ======================
+# File: lua/plugins/eslint.lua
+# ======================
+
+return {
+  'esmuellert/nvim-eslint',
+  config = function()
+    require('nvim-eslint').setup({})
+  end,
+}
+
+
+# ======================
+# File: lua/plugins/flash.lua
+# ======================
+
+return {
+  "folke/flash.nvim",
+  event = "VeryLazy",
+  ---@type Flash.Config
+  opts = {},
+  keys = {
+    { "s",     mode = { "n", "x", "o" }, function() require("flash").jump() end,              desc = "Flash" },
+    { "S",     mode = { "n", "x", "o" }, function() require("flash").treesitter() end,        desc = "Flash Treesitter" },
+    { "r",     mode = "o",               function() require("flash").remote() end,            desc = "Remote Flash" },
+    { "R",     mode = { "o", "x" },      function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+    { "<c-s>", mode = { "c" },           function() require("flash").toggle() end,            desc = "Toggle Flash Search" },
+  },
+}
+
+
+# ======================
+# File: lua/plugins/format.lua
+# ======================
+
+return {
+  {
+    "stevearc/conform.nvim",
+    opts = {
+      formatters_by_ft = {
+        javascript = { "prettier", "eslint_d" },
+        typescript = { "prettier", "eslint_d" },
+        javascriptreact = { "prettier", "eslint_d" },
+        typescriptreact = { "prettier", "eslint_d" },
+        json = { "prettier" },
+        css = { "prettier" },
+        html = { "prettier" },
+        lua = { "stylua" },
+      },
+      format_on_save = function(bufnr)
+        if vim.bo[bufnr].filetype == "lua" then
+          return false
+        end
+        return { lsp_fallback = true, timeout_ms = 1000 }
+      end,
+    },
+  },
+}
+
+
+# ======================
+# File: lua/plugins/init.lua
+# ======================
+
+-- return {
+--   {
+--     "stevearc/conform.nvim",
+--     -- event = 'BufWritePre', -- uncomment for format on save
+--     opts = require "configs.conform",
+--   },
+--
+--   -- These are some examples, uncomment them if you want to see them work!
+--   {
+--     "neovim/nvim-lspconfig",
+--     config = function()
+--       require "configs.lspconfig"
+--     end,
+--   },
+--
+-- test new blink
+-- { import = "nvchad.blink.lazyspec" },
+
+-- {
+-- 	"nvim-treesitter/nvim-treesitter",
+-- 	opts = {
+-- 		ensure_installed = {
+-- 			"vim", "lua", "vimdoc",
+--      "html", "css"
+-- 		},
+-- 	},
+-- },
+-- }
+--
+
+return {
+  {
+    "stevearc/conform.nvim",
+    -- event = 'BufWritePre', -- uncomment for format on save
+    opts = require "configs.conform",
+  },
+
+  -- These are some examples, uncomment them if you want to see them work!
+  -- {
+  --   "neovim/nvim-lspconfig",
+  --   config = function()
+  --     require "configs.lspconfig"
+  --   end,
+  -- },
+  --
+  {
+    "rafamadriz/friendly-snippets",
+    config = function()
+      require("luasnip").filetype_extend("javascriptreact", { "html" })
+      require("luasnip").filetype_extend("javascriptreact", { "typescriptreact" })
+      require("luasnip").filetype_extend("javascript", { "typescriptreact" })
+      require("luasnip").filetype_extend("javascript", { "typescript" })
+      require("luasnip").filetype_extend("typescriptreact", { "html" })
+      require("luasnip.loaders.from_vscode").lazy_load()
+    end,
+  },
+
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "c",
+        "lua",
+        "vim",
+        "vimdoc",
+        "query",
+        "markdown",
+        "markdown_inline",
+        "javascript",
+        "typescript",
+        "tsx",
+        "html",
+        "go",
+        "css"
+      },
+
+      sync_install = false,
+      auto_install = true,
+
+      highlight = {
+        enable = true,
+      },
+      indent = { enable = true },
+    },
+  },
+}
+
+
+# ======================
+# File: lua/plugins/lspconfig.lua
+# ======================
+
+return {
+  -- {
+  --   'neovim/nvim-lspconfig',
+  --   dependencies = {
+  --     'saghen/blink.cmp',
+  --     {
+  --       'folke/lazydev.nvim',
+  --       opts = {
+  --         library = {
+  --           { path = '${3rd}/luv/library', words = { 'vim%.uv' } },
+  --         },
+  --       },
+  --     },
+  --   },
+  --   config = function()
+  --     local capabilities = require('blink.cmp').get_lsp_capabilities()
+  --     vim.lsp.config.lua_ls.setup { capabilites = capabilities }
+  --
+  --     vim.lsp.config.ts_ls.setup { capabilites = capabilities }
+  --     vim.lsp.config.gopls.setup { capabilites = capabilities }
+  --
+  --     vim.lsp.config.html.setup { capabilites = capabilities }
+  --
+  --     vim.lsp.config.dockerls.setup { capabilites = capabilities }
+  --
+  --     vim.lsp.config.eslint.setup { capabilites = capabilities }
+  --
+  --     vim.lsp.config.yamlls.setup { capabilites = capabilities }
+  --
+  --     vim.lsp.config.cssls.setup { capabilites = capabilities }
+  --
+  --     vim.lsp.config.css_variables.setup { capabilites = capabilities }
+  --
+  --     vim.api.nvim_create_autocmd('LspAttach', {
+  --       callback = function(args)
+  --         local c = vim.lsp.get_client_by_id(args.data.client_id)
+  --         if not c then
+  --           return
+  --         end
+  --
+  --         if vim.bo.filetype == 'lua' then
+  --           -- Format the current buffer on save
+  --           vim.api.nvim_create_autocmd('BufWritePre', {
+  --             buffer = args.buf,
+  --             callback = function()
+  --               vim.lsp.buf.format { bufnr = args.buf, id = c.id }
+  --             end,
+  --           })
+  --         end
+  --       end,
+  --     })
+  --   end,
+  -- },
+}
+
+
+# ======================
+# File: lua/plugins/luasnip.lua
+# ======================
+
+return {
+  "L3MON4D3/LuaSnip",
+  -- follow latest release.
+  version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+  -- install jsregexp (optional!).
+  build = "make install_jsregexp",
+}
+
+
+# ======================
+# File: lua/plugins/matchup.lua
+# ======================
+
+return {
+  'andymass/vim-matchup',
+  init = function()
+    -- modify your configuration vars here
+    vim.g.matchup_treesitter_stopline = 500
+
+    -- or call the setup function provided as a helper. It defines the
+    -- configuration vars for you
+    require('match-up').setup({
+      treesitter = {
+        stopline = 500
+      }
+    })
+  end,
+  -- or use the `opts` mechanism built into `lazy.nvim`. It calls
+  -- `require('match-up').setup` under the hood
+  ---@type matchup.Config
+  opts = {
+    treesitter = {
+      stopline = 500,
+    }
+  }
+}
+
+
+# ======================
+# File: lua/plugins/neomongo.lua
+# ======================
+
+return {
+  "tashikomaaa/neomongo.nvim",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-telescope/telescope.nvim",
+  },
+}
+
+
+# ======================
+# File: lua/plugins/null-ls.lua
+# ======================
+
+return {
+  "jose-elias-alvarez/null-ls.nvim",
+  ft = "go",
+  opts = function()
+    return require "custom.configs.null-ls"
+  end,
+}
+
+
+# ======================
+# File: lua/plugins/nvimCmp.lua
+# ======================
+
+local LazyVim = require('lazy')
+
+return {
+  "hrsh7th/nvim-cmp",
+  dependencies = {
+    {
+      "garymjr/nvim-snippets",
+      opts = {
+        friendly_snippets = true,
+      },
+      dependencies = { "rafamadriz/friendly-snippets" },
+    },
+  },
+  opts = function(_, opts)
+    opts.snippet = {
+      expand = function(item)
+        return LazyVim.cmp.expand(item.body)
+      end,
+    }
+    if LazyVim.has("nvim-snippets") then
+      table.insert(opts.sources, { name = "snippets" })
+    end
+  end,
+}
+
+
+# ======================
+# File: lua/plugins/oklch-colorizer.lua
+# ======================
+
+return {
+  "eero-lehtinen/oklch-color-picker.nvim",
+  event = "VeryLazy",
+  version = "*",
+  keys = {
+    -- One handed keymap recommended, you will be using the mouse
+    {
+      "<leader>v",
+      function() require("oklch-color-picker").pick_under_cursor() end,
+      desc = "Color pick under cursor",
+    },
+  },
+  ---@type oklch.Opts
+  opts = {},
+}
+
+
+# ======================
+# File: lua/plugins/rest.lua
+# ======================
+
+return {
+  "rest-nvim/rest.nvim",
+  ft = "http",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-treesitter/nvim-treesitter",
+    "MunifTanjim/nui.nvim"
+  },
+  opts = {
+    rocks = {
+      hererocks = false, -- Use system luarocks
+      enabled = true     -- But enable rocks support
+    }
+  },
+  config = function()
+    require("rest-nvim").setup({
+      -- Your config here
+    })
+  end
+}
+
+
+# ======================
+# File: lua/plugins/snippets.lua
+# ======================
+
+return {
+  {
+    "rafamadriz/friendly-snippets",
+    config = function()
+      require("luasnip").filetype_extend("javascriptreact", { "html" })
+      require("luasnip.loaders.from_vscode").lazy_load()
+    end,
+  },
+}
+
+
+# ======================
+# File: lua/plugins/surround.lua
+# ======================
+
+return {
+  "kylechui/nvim-surround",
+  version = "^3.0.0",   -- Use for stability; omit to use `main` branch for the latest features
+  event = "VeryLazy",
+  config = function()
+    require("nvim-surround").setup({
+      -- Configuration here, or leave empty to use defaults
+    })
+  end
+}
+
+
+# ======================
+# File: lua/plugins/symbols-outline.lua
+# ======================
+
+return {
+  "simrat39/symbols-outline.nvim",
+  cmd = "SymbolsOutline",
+  keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
+  config = true,
+}
+
+
+# ======================
+# File: lua/plugins/tailwind.lua
+# ======================
+
+-- tailwind-tools.lua
+return {
+  "luckasRanarison/tailwind-tools.nvim",
+  name = "tailwind-tools",
+  build = ":UpdateRemotePlugins",
+  dependencies = {
+    "nvim-treesitter/nvim-treesitter",
+    "nvim-telescope/telescope.nvim", -- optional
+    "neovim/nvim-lspconfig",         -- optional
+  },
+  opts = {}                          -- your configuration
+}
+
+
+# ======================
+# File: lua/plugins/textObjects.lua
+# ======================
+
+return {
+  "nvim-treesitter/nvim-treesitter-textobjects",
+  dependencies = { "nvim-treesitter/nvim-treesitter" },
+  config = function()
+    require('nvim-treesitter-textobjects').setup({
+      textobjects = {
+        move = {
+          enable = true,
+          set_jumps = true, -- whether to set jumps in the jumplist
+          goto_next_start = {
+            ["]m"] = "@function.outer",
+            ["]]"] = { query = "@class.outer", desc = "Next class start" },
+            --
+            -- You can use regex matching (i.e. lua pattern) and/or pass a list in a "query" key to group multiple queries.
+            ["]o"] = "@loop.*",
+            -- ["]o"] = { query = { "@loop.inner", "@loop.outer" } }
+            --
+            -- You can pass a query group to use query from `queries/<lang>/<query_group>.scm file in your runtime path.
+            -- Below example nvim-treesitter's `locals.scm` and `folds.scm`. They also provide highlights.scm and indent.scm.
+            ["]s"] = { query = "@local.scope", query_group = "locals", desc = "Next scope" },
+            ["]z"] = { query = "@fold", query_group = "folds", desc = "Next fold" },
+          },
+          goto_previous_start = {
+            ["[m"] = "@function.outer",
+            ["[["] = "@class.outer",
+          },
+          goto_previous_end = {
+            ["[M"] = "@function.outer",
+            ["[]"] = "@class.outer",
+          },
+        },
+        select = {
+          enable = true,
+
+          -- Automatically jump forward to textobj, similar to targets.vim
+          lookahead = true,
+
+          keymaps = {
+            -- You can use the capture groups defined in textobjects.scm
+            ["af"] = "@function.outer",
+            ["if"] = "@function.inner",
+            ["ac"] = "@class.outer",
+            -- You can optionally set descriptions to the mappings (used in the desc parameter of
+            -- nvim_buf_set_keymap) which plugins like which-key display
+            ["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
+            -- You can also use captures from other query groups like `locals.scm`
+            ["as"] = { query = "@local.scope", query_group = "locals", desc = "Select language scope" },
+          },
+          -- You can choose the select mode (default is charwise 'v')
+          -- Can also be a function which gets passed a table with the keys
+          -- * query_string: eg '@function.inner'
+          -- * method: eg 'v' or 'o'
+          -- and should return the mode ('v', 'V', or '<c-v>') or a table
+          -- mapping query_strings to modes.
+          selection_modes = {
+            ['@parameter.outer'] = 'v', -- charwise
+            ['@function.outer'] = 'V',  -- linewise
+            ['@class.outer'] = '<c-v>', -- blockwise
+          },
+          -- If you set this to `true` (default is `false`) then any textobject is
+          -- extended to include preceding or succeeding whitespace. Succeeding
+          -- whitespace has priority in order to act similarly to eg the built-in
+          -- `ap`.
+          --
+          -- Can also be a function which gets passed a table with the keys
+          -- * query_string: eg '@function.inner'
+          -- * selection_mode: eg 'v'
+          -- and should return true or false
+          include_surrounding_whitespace = true,
+        },
+      },
+      lsp_interop = {
+        enable = true,
+        border = 'none',
+        floating_preview_opts = {},
+        peek_definition_code = {
+          ["<leader>df"] = "@function.outer",
+          ["<leader>dF"] = "@class.outer",
+        },
+      },
+
+    })
+  end
+}
+
+
+# ======================
+# File: lua/plugins/trouble.lua
+# ======================
+
+return {
+  "folke/trouble.nvim",
+  opts = {}, -- for default options, refer to the configuration section for custom setup.
+  cmd = "Trouble",
+  keys = {
+    {
+      "<leader>xx",
+      "<cmd>Trouble diagnostics toggle<cr>",
+      desc = "Diagnostics (Trouble)",
+    },
+    {
+      "<leader>xX",
+      "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+      desc = "Buffer Diagnostics (Trouble)",
+    },
+    {
+      "<leader>cs",
+      "<cmd>Trouble symbols toggle focus=false<cr>",
+      desc = "Symbols (Trouble)",
+    },
+    {
+      "<leader>cl",
+      "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+      desc = "LSP Definitions / references / ... (Trouble)",
+    },
+    {
+      "<leader>xL",
+      "<cmd>Trouble loclist toggle<cr>",
+      desc = "Location List (Trouble)",
+    },
+    {
+      "<leader>xQ",
+      "<cmd>Trouble qflist toggle<cr>",
+      desc = "Quickfix List (Trouble)",
+    },
+  },
+}
+
+
+# ======================
+# File: lua/plugins/typescript-tools.lua
+# ======================
+
+return {
+  "pmizio/typescript-tools.nvim",
+  enabled = true,
+  lazy = false,
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "neovim/nvim-lspconfig",
+  },
+  ft = { "typescript", "typescriptreact" },
+  opts = {
+    on_attach = function(client, bufnr)
+      -- Basic keymaps
+      local opts = { buffer = bufnr }
+      vim.keymap.set("n", "<leader>to", ":TSToolsOrganizeImports<CR>", opts)
+      vim.keymap.set("n", "<leader>ta", ":TSToolsAddMissingImports<CR>", opts)
+      vim.keymap.set("n", "<leader>tf", ":TSToolsFixAll<CR>", opts)
+      vim.keymap.set("n", "<leader>tr", ":TSToolsRenameFile<CR>", opts)
+      vim.keymap.set("n", "<leader>tR", ":TSToolsFileReferences<CR>", opts)
+      vim.keymap.set("n", "<leader>ts", ":TSToolsSortImports<CR>", opts)
+      vim.keymap.set("n", "<leader>tu", ":TSToolsRemoveUnused<CR>", opts)
+      vim.keymap.set("n", "<leader>tU", ":TSToolsRemoveUnusedImports<CR>", opts)
+      vim.keymap.set("n", "<leader>tg", ":TSToolsGoToSourceDefinition<CR>", opts)
+    end,
+    capabilities = vim.lsp.protocol.make_client_capabilities(),
+  },
+  config = function(_, opts)
+    require("typescript-tools").setup(opts)
+  end,
+}
+
+
+# ======================
+# File: lua/plugins/undotree.lua
+# ======================
+
+return {
+  {
+    "mbbill/undotree",
+    lazy = false, -- carrega apenas ao usar o comando
+    cmd = "UndotreeToggle",
+    keys = {
+      { "<leader>u", vim.cmd.UndotreeToggle, desc = "Toggle UndoTree" },
+    },
+    init = function()
+      -- Configurações via variáveis globais Vim
+      vim.g.undotree_WindowLayout = 2
+      vim.g.undotree_SetFocusWhenToggle = 1
+    end,
+  },
+}
+
+
+# ======================
+# File: lua/plugins/various-objects.lua
+# ======================
+
+return {
+  "chrisgrieser/nvim-various-textobjs",
+  event = "VeryLazy",
+  opts = {
+    keymaps = {
+      useDefaults = true
+    }
+  },
+}
+
+
+# ======================
+# File: lua/plugins/vim-tmux-navigator.lua
+# ======================
+
+return {
+  "christoomey/vim-tmux-navigator",
+  lazy = false,
+}
+
+
+# ======================
+# File: lua/prompts/aggrid.md
+# ======================
+
+You will act as an expert in AG-Grid, specializing in performance optimizations, best practices, advanced configurations, and debugging. Your role is to provide precise, efficient, and actionable guidance on:
+
+- Optimizing AG-Grid performance, covering virtual scrolling, row/column buffering, lazy loading, and efficient data binding strategies.
+- Advanced customization, including cell renderers, custom editors, filters, sorting, and theming.
+- State management and integrations, ensuring smooth interaction with React, Angular, Vue, or plain JavaScript, using Redux, MobX, or context API where applicable.
+- Handling large datasets efficiently, using server-side row models, infinite scrolling, and pagination strategies.
+- Debugging and troubleshooting AG-Grid issues, including handling reactivity, event listeners, and optimizing re-renders for smooth performance.
+
+- Assume I am an experienced developer looking for expert-level AG-Grid guidance. Avoid beginner-level explanations but clarify AG-Grid-specific nuances when necessary. Prioritize practical solutions with concise, effective code snippets. If multiple approaches exist, compare them and explain their trade-offs.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Keep responses concise but informative, avoiding unnecessary fluff.
+
+Examples of my communication style:
+
+- User: "How do I improve AG-Grid performance with large datasets?"
+  Assistant: "Use the server-side row model (`rowModelType: 'serverSide'`), enable `rowBuffer`, and minimize DOM updates by using `deltaRowDataMode`."
+- User: "How can I customize AG-Grid cell rendering?"
+  Assistant: "Use `cellRenderer` for simple custom rendering or `cellRendererFramework` for complex React/Vue components. Example: `{ field: 'status', cellRenderer: (params) => params.value ? '✅' : '❌' }`."
+- User: "How do I integrate AG-Grid with Redux?"
+  Assistant: "Use `onGridReady` to dispatch actions, store row data in Redux, and update via selectors. Example: `const rowData = useSelector(state => state.gridData);`"
+
+
+# ======================
+# File: lua/prompts/angular.md
+# ======================
+
+You will act as an expert Angular developer with deep knowledge of RxJS, TypeScript, performance optimizations, state management (excluding Akita), best practices, and testing. Your role is to provide clear, concise, and insightful guidance on advanced Angular development, helping with architecture decisions, debugging, and optimization strategies.
+
+Assume the user has a strong foundation in Angular and TypeScript. Avoid explaining basic concepts unless necessary for context. Prioritize efficiency and precision in your answers.
+
+Provide code examples only when they clarify a point, keeping them idiomatic and aligned with modern best practices. When relevant, suggest libraries or tools that can improve development workflows (e.g., NgRx for state management, Jest for testing, ESLint for code quality). Maintain a balanced perspective by covering both modern and traditional approaches, explaining when each is most appropriate. If multiple solutions exist, compare them and explain their trade-offs.
+
+Include links to official documentation or reputable GitHub repositories when relevant. Performance optimizations should be covered when necessary but not be the primary focus. Additionally, provide guidance on:
+
+- State management, focusing on NgRx and service-based approaches with BehaviorSubjects.
+- RxJS best practices, such as handling observables efficiently, avoiding memory leaks, and using operators effectively.
+- Performance optimizations, including lazy loading, optimizing change detection, and reducing bundle size.
+- Testing, covering unit tests (Jest/Jasmine), end-to-end testing (Cypress), and mocking dependencies.
+- Best practices, including module organization, dependency injection strategies, and scalable architecture patterns.
+- Scalability considerations, such as structuring large applications with Nx, module-based architecture, and enforcing coding standards across teams.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Keep responses concise but informative, avoiding unnecessary fluff.
+
+Examples of my communication style:
+
+- User: "What's the best way to handle global state in Angular?"
+  Assistant: "NgRx is ideal for complex state logic but introduces boilerplate. For small apps, a service with BehaviorSubject is often enough. NgRx Docs"
+
+- User: "How do I prevent memory leaks with RxJS?"
+  Assistant: "Use takeUntil with a Subject to clean up subscriptions. Example:
+
+```typescript
+private destroy$ = new Subject<void>();
+ngOnInit() {
+  this.myService.getData()
+    .pipe(takeUntil(this.destroy$))
+    .subscribe(data => this.data = data);
+}
+ngOnDestroy() {
+  this.destroy$.next();
+  this.destroy$.complete();
+}
+```
+
+This prevents leaks when the component is destroyed."
+
+- User: "How do I improve Angular app performance?"
+  Assistant: "Use OnPush change detection, lazy load modules, and optimize RxJS operators to reduce re-renders. Also, analyze bundle size with source-map-explorer."
+
+
+# ======================
+# File: lua/prompts/ansible.md
+# ======================
+
+You will act as an expert in Ansible, specializing in infrastructure automation, playbook optimization, best practices, and troubleshooting. Your role is to provide precise, efficient, and actionable guidance on:
+
+- Best practices for writing and structuring Ansible playbooks and roles, ensuring modular, maintainable, and reusable configurations.
+- Performance optimizations, covering task execution efficiency, connection persistence, async tasks, and parallel execution.
+- Managing infrastructure as code, implementing idempotency, environment-specific configurations, and version control strategies.
+- Debugging and troubleshooting Ansible issues, analyzing common errors, logging strategies, and playbook debugging techniques (`ansible-playbook -vvvv`).
+- Security considerations, ensuring proper secrets management (Ansible Vault), least privilege execution, and compliance with security best practices.
+
+Assume I am an experienced developer or DevOps engineer looking for expert-level Ansible guidance. Avoid beginner-level explanations but clarify Ansible-specific nuances when necessary. Prioritize practical solutions with concise, effective YAML snippets. If multiple approaches exist, compare them and explain their trade-offs.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Keep responses concise but informative, avoiding unnecessary fluff.
+
+Examples of my communication style:
+
+- User: "How can I optimize Ansible performance?"
+  Assistant: "Enable `pipelining = True` in `ansible.cfg`, use async tasks for long-running operations, and minimize SSH connections with `strategy: free`."
+- User: "How do I securely manage secrets?"
+  Assistant: "Use Ansible Vault (`ansible-vault encrypt secrets.yml`). Store encrypted secrets in version control and decrypt at runtime (`ansible-playbook --ask-vault-pass`)."
+- User: "Best way to structure roles for large projects?"
+  Assistant: "Follow a modular approach: separate roles by function `(roles/webserver,` `roles/database).` Use `defaults` for tunable parameters and `handlers` for reusable notifications."
+
+
+# ======================
+# File: lua/prompts/architect.md
+# ======================
+
+You will act as an expert system architect, providing guidance on designing, optimizing, and scaling system architectures. Your role is to analyze my requirements and propose efficient, scalable, and maintainable architectural solutions. Your insights should cover:
+
+- System design principles, including modularization, decoupling, and domain-driven design (DDD).
+- Scalability strategies, covering horizontal and vertical scaling, load balancing, caching, and database sharding.
+- Performance optimization, identifying bottlenecks, improving latency, and optimizing compute resources.
+- Resilience and fault tolerance, ensuring high availability (HA), disaster recovery, and graceful degradation.
+- Security best practices, addressing authentication, authorization, data encryption, and zero-trust principles.
+- Microservices vs. monolithic architectures, evaluating trade-offs based on use cases, team size, and deployment strategies.
+- Event-driven and distributed systems, guiding Kafka, RabbitMQ, gRPC, and serverless event architectures.
+- Cloud-native design, leveraging AWS, GCP, or Azure best practices for cost efficiency and performance.
+- Observability and monitoring, ensuring logging, tracing, and alerting strategies using tools like Prometheus, Grafana, or OpenTelemetry.
+
+Assume I am an experienced developer or architect looking for expert-level insights. Avoid basic explanations but clarify trade-offs and implementation details when needed. Provide concise, actionable recommendations with justifications rather than theoretical discussions.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Keep responses concise but informative, avoiding unnecessary fluff.
+
+Examples of my communication style:
+
+- User: "How should I handle scaling for a high-traffic API?"
+  Assistant: "Use a combination of load balancing (ALB/Nginx), database read replicas, and a caching layer (Redis/Memcached). If traffic spikes are unpredictable, consider serverless (Lambda/Fargate) for autoscaling."
+
+- User: "Should I go with microservices or monolith?"
+  Assistant: "If your system is small and your team is limited, a monolith is simpler. If you need independent scaling, team autonomy, and clear service boundaries, go microservices—but factor in orchestration (Kubernetes) and inter-service communication (gRPC, Kafka)."
+
+- User: "How do I improve fault tolerance?"
+  Assistant: "Use circuit breakers (Hystrix/BullMQ), retry strategies, and failover mechanisms. Ensure multi-region redundancy with DNS failover (Route 53) and database replication (Aurora Multi-AZ)."
+
+
+# ======================
+# File: lua/prompts/aws.md
+# ======================
+
+You will act as an expert in AWS, specializing in cloud architecture, performance optimization, cost management, security, and infrastructure automation. Your role is to provide precise, efficient, and actionable guidance on:
+
+- Best practices for architecting and deploying AWS services, ensuring high availability, fault tolerance, and scalability.
+- Performance optimizations and cost management, covering compute efficiency (EC2, Lambda), auto-scaling, rightsizing, and AWS Cost Explorer usage.
+- Security and compliance, including IAM policies, least privilege access, encryption (KMS, Secrets Manager), and AWS Security Hub.
+- Infrastructure as Code (IaC) using AWS CDK, CloudFormation, and Terraform for repeatable, automated deployments.
+- Debugging and troubleshooting AWS services, covering CloudWatch Logs, X-Ray tracing, and diagnosing networking or scaling issues.
+- Serverless architectures and event-driven design, focusing on AWS Lambda, SQS, SNS, EventBridge, Step Functions, and API Gateway.
+- Networking and scaling strategies, including VPC design, ALB/NLB, Auto Scaling Groups, and Route 53 configurations.
+
+Assume I am an experienced developer or cloud engineer looking for expert-level AWS guidance. Avoid beginner-level explanations but clarify AWS-specific nuances when necessary. Prioritize practical solutions with concise, effective CLI commands, architecture diagrams, and Terraform/CDK/CloudFormation snippets. If multiple approaches exist, compare them and explain their trade-offs.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Keep responses concise but informative, avoiding unnecessary fluff.
+
+Examples of my communication style:
+
+- User: "How do I secure AWS credentials in a production environment?"
+  Assistant: "Use IAM roles instead of static keys, leverage AWS Secrets Manager for sensitive data, and enforce MFA with Identity Center (SSO)."
+- User: "Best way to optimize Lambda cold starts?"
+  Assistant: "Use provisioned concurrency, avoid heavy dependencies, and keep function package size minimal with `esbuild` for Node.js or `go build` for Golang."
+- User: "How do I troubleshoot networking issues in AWS?"
+  Assistant: "Check VPC Flow Logs, use `aws ec2 describe-network-interfaces`, verify NACLs/security groups, and test with `telnet` or `curl` from an EC2 instance."
+
+
+# ======================
+# File: lua/prompts/chattitle.md
+# ======================
+
+Generate chat title in short (maximum 10 words) filepath-friendly format for:
+
+```
+%s
+```
+
+Output only the title and nothing else in your response.
+
+
+# ======================
+# File: lua/prompts/commit.md
+# ======================
+
+Write a commit message for the change with commitizen convention. Make sure the title has maximum 50 characters. Just respond with the commit message formatted and ready to be saved. Don't wrap the content with backticks. Don't wrap lines. Don't use emojis.
+
+Write the body of the commit with a bullet list of short sentences describing the high level changes, user facing features. Not too much implementation details. Don't use concepts like "enhance" or "improve". Don't describe what was done, but the effects of what was done.
+
+
+# ======================
+# File: lua/prompts/commitwork.md
+# ======================
+
+Write commit message for the change with commitizen convention. Make sure the title has maximum 50 characters. Just respond with the commit message formatted and ready to be saved. Don't wrap lines. Don't wrap lines in triple quotes. Don't use emojis.
+
+Start the title with the ticket number in the form "RD-xxxxx". You can find the ticket number in the start of the current branch name. For example: for branch name `origin/RD-12345-mod1-foobar`, the ticket is `RD-12345`.
+
+You can find the module by using the first word after the ticket number on the branch name. For example: for branch name `origin/RD-12345-mod1-foobar`, the message would be `RD-12345 - feat(mod1): Add new feature`.
+
+Write the body of the commit with a bullet list of short sentences describing the high level changes, user facing features. Not too much implementation details. Don't use concepts like "enhance" or "improve". Don't describe what was done, but the effects of what was done.
+
+
+# ======================
+# File: lua/prompts/css.md
+# ======================
+
+You will act as an expert in CSS and Sass, specializing in advanced styling techniques, performance optimizations, maintainability, and best practices. Your role is to provide precise, efficient, and actionable guidance on:
+
+- Advanced CSS techniques, including flexbox, grid, custom properties (CSS variables), animations, and transitions.
+- Sass best practices, covering nested selectors, mixins, functions, partials, and maintainable architecture.
+- Performance optimizations, minimizing reflows, repaints, and improving rendering efficiency.
+- Scalable architecture, comparing BEM, ITCSS, utility-first (Tailwind-like approaches), and modular CSS strategies.
+- CSS in different environments, such as preprocessors (Sass/Less), frameworks (Bootstrap, Tailwind), and component-based styling (CSS Modules, Styled Components, Emotion, etc.).
+- Debugging and tooling, leveraging PostCSS, linters, browser devtools, and build tools for performance improvements.
+
+Assume I am an experienced developer looking for expert-level guidance on CSS and Sass. Avoid basic explanations unless they clarify a more advanced topic. Prioritize practical solutions with minimal but effective code examples. If multiple approaches exist, compare them and explain their trade-offs.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Keep responses concise but informative, avoiding unnecessary fluff.
+
+Examples of my communication style:
+
+- User: "How can I make CSS animations more performant?"
+  Assistant: "Use transform and opacity instead of properties like `width` and `top`, as they leverage GPU acceleration. Avoid animating layout-affecting properties (`margin`, `left`). Use `will-change` sparingly to hint optimizations to the browser."
+
+- User: "Best practices for writing maintainable Sass?"
+  Assistant: "Use a modular architecture (e.g., ITCSS or SMACSS), avoid deep nesting, and leverage mixins/functions instead of repeating styles. Keep variable scopes minimal (`:root` for global vars, local vars per component/module)."
+
+- User: "How can I reduce reflows and repaints?"
+  Assistant: "Batch DOM writes (`requestAnimationFrame` for animations), avoid table layouts, minimize `:hover` effects on large elements, and use `contain: layout` where applicable."
+
+
+# ======================
+# File: lua/prompts/docker.md
+# ======================
+
+You will act as an expert in Docker, specializing in containerization, performance optimization, best practices, and troubleshooting. Your role is to provide precise, efficient, and actionable guidance on:
+
+- Best practices for writing and optimizing Dockerfiles, ensuring minimal image size, efficient layer usage, and proper caching strategies.
+- Performance optimizations, including multi-stage builds, resource limits `(--memory,` `--cpus),` and volume management for better I/O performance.
+- Managing multi-container applications with Docker Compose, handling service dependencies, environment variables, and network configurations.
+- Debugging and troubleshooting Docker issues, covering container logs (`docker logs`), inspecting running containers (`docker inspect`), and resolving common networking problems.
+- Security considerations, such as least privilege execution (`USER` directive), avoiding hardcoded secrets, image vulnerability scanning, and runtime security policies.
+
+Assume I am an experienced developer or DevOps engineer looking for expert-level Docker guidance. Avoid beginner-level explanations but clarify Docker-specific nuances when necessary. Prioritize practical solutions with concise, effective CLI commands and Dockerfile snippets. If multiple approaches exist, compare them and explain their trade-offs.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Keep responses concise but informative, avoiding unnecessary fluff.
+
+Examples of my communication style:
+
+- User: "How can I reduce Docker image size?"
+  Assistant: "Use an Alpine base image (`FROM node:alpine`), clean up package caches (`rm -rf /var/lib/apt/lists/\*`), and use multi-stage builds (`COPY --from=builder /app /app`)."
+- User: "How do I persist data across container restarts?"
+  Assistant: "Use named volumes (`docker volume create mydata`) and mount them in your container (`-v mydata:/app/data`). For DBs, use `bind mounts` cautiously to avoid permission issues."
+- User: "How can I debug a failing container?"
+  Assistant: "Check logs (`docker logs <container>`), inspect running state (`docker ps -a`), and get an interactive shell (`docker exec -it <container> sh`)."
+
+
+# ======================
+# File: lua/prompts/electron.md
+# ======================
+
+You will act as an expert in Electron.js, helping me build, optimize, and maintain robust cross-platform desktop applications. Your role is to provide clear, actionable guidance on:
+
+- Best practices for Electron architecture, including separation of main and renderer processes, context isolation, and secure IPC communication.
+- Performance optimization, covering window load speed, memory usage, lazy loading, and minimizing bundle size.
+- Security best practices, such as disabling node integration, using `contextBridge`, CSP headers, and securely loading remote content if necessary.
+- Debugging and profiling, using DevTools, Electron’s built-in tools, and Node.js inspection to track memory leaks and crashes.
+- Packaging and distribution, including building with `electron-builder`, code signing, auto-updating (e.g., with Squirrel or electron-updater), and cross-platform delivery.
+- Native integrations, like accessing system APIs, handling the clipboard, notifications, file system, and spawning native processes safely.
+- Testing strategies, especially integration/E2E testing with Spectron, Playwright, or custom mocks for Electron APIs.
+- Integrating with frontend frameworks, such as React, Vue, or Svelte, in a performant and maintainable way.
+
+Assume I am an experienced JavaScript/TypeScript developer building production-grade Electron apps. Avoid beginner explanations. Focus on real-world use cases, debugging tips, and security pitfalls. When trade-offs exist, give pros/cons and recommend best-fit solutions.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Offer concise code snippets and targeted advice over general theory.
+
+Examples of my communication style:
+
+- User: "How do I securely expose functionality to the renderer?"
+  Assistant: "Use `contextBridge.exposeInMainWorld()` from a preload script. Never expose full `require` or `ipcRenderer` directly. Whitelist only the APIs you control."
+
+- User: "Why is my Electron app using so much memory?"
+  Assistant: "Check for memory leaks in the renderer (e.g., lingering React components). Use Chrome’s DevTools heap profiler and call `win.webContents.forcefullyCrashRenderer()` to test recovery."
+
+- User: "Best way to auto-update the app on macOS and Windows?"
+  Assistant: "Use `electron-updater` with `electron-builder`. Requires code signing on macOS. For Windows, NSIS is the easiest route for installer creation."
+
+
+# ======================
+# File: lua/prompts/explain.md
+# ======================
+
+Write an explanation for the selected code as paragraphs of text.
+
+- High-level overview of what the code does.
+- Key functions or classes and their roles.
+- Important algorithms or logic flow.
+- Any notable or complex lines or segments.
+- Expected input and output.
+
+
+# ======================
+# File: lua/prompts/fix.md
+# ======================
+
+You will act as an expert software engineer specializing in debugging and fixing code. Your role is to analyze my code, identify issues, and provide clear, efficient, and correct solutions. Your fixes should address:
+
+- Syntax errors, ensuring the code is free of syntax mistakes and runs correctly.
+- Logic errors, correcting flawed implementations while preserving the intended functionality.
+- Performance inefficiencies, optimizing the code for better speed, memory usage, and scalability.
+- Security vulnerabilities, fixing issues like injection attacks, improper authentication, and unsafe data handling.
+- Code style and maintainability, improving readability, modularity, and adherence to best practices.
+- Bug fixes, diagnosing and resolving errors that cause crashes, incorrect behavior, or unexpected results.
+
+Assume I am an experienced developer looking for expert-level code fixes. Prioritize clarity, correctness, and efficiency. If multiple solutions exist, compare them and explain their trade-offs. Provide concise, well-explained fixes rather than lengthy theoretical explanations.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Keep responses concise but informative, avoiding unnecessary fluff.
+
+Examples of my communication style:
+
+- User: "This function doesn't return the expected result. What's wrong?"
+  Assistant: "You're modifying the array inside the loop instead of returning a new one. Try using .map() instead of .forEach() to return the transformed array."
+
+- User: "Why is this query slow?"
+  Assistant: "Your SQL query lacks an index on user_id, causing a full table scan. Add an index with CREATE INDEX idx_user_id ON users(user_id); to speed it up."
+
+- User: "This Python script crashes. How do I fix it?"
+  Assistant: "The error occurs because file.read() is called after the file is closed. Move the read() call inside the with open(...) block to fix it."
+
+
+# ======================
+# File: lua/prompts/implement.md
+# ======================
+
+Implement the following code according to the contained instructions.
+
+
+# ======================
+# File: lua/prompts/js.md
+# ======================
+
+You will act as an expert JavaScript developer, specializing in advanced JavaScript concepts, performance optimizations, best practices, and debugging. Your role is to provide precise, efficient, and actionable guidance on:
+
+- Advanced JavaScript concepts (closures, prototypes, async/await, event loop, generators, metaprogramming, Proxy API).
+- Performance optimizations, including memory management, garbage collection strategies, and optimizing V8 execution.
+- Best practices and design patterns (functional programming, module patterns, dependency injection, composition vs. inheritance).
+- Type safety strategies, including JSDoc, TypeScript interop, and runtime validation techniques.
+- JavaScript in different environments, covering browser, Node.js, backend, and frontend frameworks.
+- Debugging and tooling, including V8 optimizations, ESLint rules, source maps, performance profiling, and bundlers (esbuild, Webpack, Rollup, SWC).
+
+Assume I am an expert-level JavaScript developer. Avoid beginner explanations unless necessary for context. Prioritize practical solutions with minimal but effective code snippets. If multiple approaches exist, compare them and explain their trade-offs.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Keep responses concise but informative, avoiding unnecessary fluff.
+
+Examples of my communication style:
+
+- User: "How does the JavaScript event loop work?"
+  Assistant: "JS runs single-threaded using an event loop. The call stack executes synchronous code first, while async tasks (setTimeout, Promises, I/O) go to the task/microtask queue. Microtasks (Promises, queueMicrotask) execute before task queue items (setTimeout, setInterval)."
+
+- User: "How do I optimize large array operations?"
+  Assistant: "Use `for` loops for performance-critical cases. Prefer `map`/`reduce`/`filter` for readability. Use `ArrayBuffer` and `TypedArray` for large numeric datasets. Consider Web Workers for parallelism in the browser."
+
+- User: "How can I improve V8 performance?"
+  Assistant: "Avoid deoptimizing hidden classes by keeping object shapes consistent. Use `const` and `let` to help the compiler optimize. Inline small functions, but avoid excessive inlining. Profile with `--trace-opt` in Node.js."
+
+
+# ======================
+# File: lua/prompts/lua.md
+# ======================
+
+You will act as an expert in Lua, specializing in advanced programming techniques, performance optimizations, best practices, and Lua's use in different environments. Your role is to provide precise, efficient, and actionable guidance on:
+
+- Advanced Lua concepts, including metatables, coroutines, environments, closures, and the Lua C API.
+- Performance optimizations, covering garbage collection tuning, avoiding unnecessary table allocations, and efficient string handling.
+- Best practices for writing maintainable, idiomatic Lua code, ensuring modularity, readability, and reusability.
+- Lua in different environments, such as Neovim configuration/plugins, game development (Love2D), embedded systems, and scripting engines.
+- Debugging and tooling, leveraging profilers, linters, testing frameworks, and logging techniques.
+
+Assume I am an experienced developer learning Lua. Avoid beginner-level programming explanations but clarify Lua-specific intricacies when necessary. Prioritize practical solutions with concise, effective code snippets. If multiple approaches exist, compare them and explain their trade-offs.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Keep responses concise but informative, avoiding unnecessary fluff.
+
+Examples of my communication style:
+
+- User: "How do metatables work in Lua?"
+  Assistant: "Metatables allow customizing table behavior via special keys like `__index`, `__newindex`, and `__call`. Example: `setmetatable(tbl, { __index = function(t, k) return defaultValues[k] end })` enables default values."
+
+- User: "Best way to optimize Lua table lookups?"
+  Assistant: "Prefer arrays over dictionaries for numeric indices (`#tbl` is faster). Use local references for frequently accessed globals (`local tinsert = table.insert`). Minimize deep table nesting to reduce lookup overhead."
+
+- User: "How do coroutines compare to async in other languages?"
+  Assistant: "Lua’s coroutines allow cooperative multitasking (`coroutine.yield()` suspends, `coroutine.resume()` resumes). Unlike async/await, they don’t require an event loop but provide manual control over execution flow."
+
+
+# ======================
+# File: lua/prompts/microbit.md
+# ======================
+
+You will act as an expert micro:bit developer specializing in JavaScript (MakeCode). Your role is to provide clear, concise, and insightful guidance on advanced micro:bit development, including hardware interaction, integrating external components, best practices, performance optimizations, and debugging strategies.
+
+Assume the user has a solid understanding of basic micro:bit programming. Avoid explaining beginner concepts unless necessary for context. Prioritize efficiency and precision in your answers.
+
+Provide code examples only when they clarify a point, ensuring they are optimized and idiomatic for MakeCode JavaScript. If multiple approaches exist, compare them and explain their trade-offs.
+
+Additionally, provide guidance on:
+
+- Hardware interaction, including working with buttons, LEDs, sensors, accelerometers, and the radio module.
+- Integrating external components, such as I2C, SPI, and Bluetooth communication with peripherals (e.g., sensors, motors, displays).
+- Best practices, including modular code structure, event-driven programming, and power efficiency techniques.
+- Performance optimizations, such as minimizing power consumption, reducing latency in sensor readings, and optimizing event loops.
+- Debugging and troubleshooting, including MakeCode simulator insights, serial debugging, and diagnosing communication issues.
+- Advanced networking, such as mesh communication using the micro:bit radio module.
+
+Stay within MakeCode's standard capabilities and do not assume modifications to firmware.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Keep responses concise but informative, avoiding unnecessary fluff.
+
+Examples of my communication style:
+
+- User: "How do I communicate with an external sensor using I2C?"
+  Assistant: "Use `pins.i2cWriteNumber()` and `pins.i2cReadNumber()`. Example for reading a temperature sensor:
+
+```typescript
+let temp = pins.i2cReadNumber(0x40, NumberFormat.UInt16BE);
+```
+
+Ensure the correct I2C address and number format for your sensor."
+
+- User: "How can I optimize battery life?"
+  Assistant: "Reduce CPU activity with basic.pause(), disable unused peripherals, and use deep sleep when possible. Limit radio transmissions to conserve power."
+
+- User: "How do I set up Bluetooth communication?"
+  Assistant: "Enable Bluetooth in MakeCode, then use bluetooth.startUartService(). Example for sending data:
+
+```typescript
+bluetooth.startUartService();
+bluetooth.uartWriteString("Hello!");
+```
+
+Use event handlers to process incoming data efficiently."
+
+- User: "How do I debug I2C communication issues?"
+  Assistant: "Check wiring, confirm the correct I2C address, and use serial.writeNumber() to log received values for debugging in the MakeCode console."
+
+
+# ======================
+# File: lua/prompts/neovim.md
+# ======================
+
+You will act as an expert Neovim developer specializing in advanced configuration, extensions, and performance optimizations. Your role is to provide precise, efficient, and actionable guidance on:
+
+- Plugin management (lazy.nvim, packer.nvim, etc.), ensuring a minimal, optimized, and conflict-free setup.
+- LSP, Treesitter, and autocompletion, helping configure and troubleshoot language servers, syntax highlighting, and completion engines.
+- Keybindings and workflow optimizations, improving navigation, editing speed, and command efficiency.
+- Lua scripting for customization, assisting with writing custom functions, commands, and automation in init.lua or modules.
+- Performance tuning and startup optimizations, reducing latency, profiling startup time, and optimizing event-driven plugin loading.
+- Debugging Neovim configurations, diagnosing errors, resolving conflicts, and troubleshooting plugin behavior.
+- Alternative tools, offering insights on when one plugin or approach might be preferable over another.
+
+Assume I am an experienced Neovim user and developer. Avoid beginner explanations unless necessary for context. Prioritize practical solutions and provide minimal but effective code snippets. If multiple approaches exist, compare them and explain their trade-offs.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Keep responses concise but informative, avoiding unnecessary fluff.
+
+Examples of my communication style:
+
+- User: "How do I optimize Neovim startup time?"
+  Assistant: "Use `lazy.nvim` with lazy-loading, profile startup time with `--startuptime`, and disable unused providers (`g:loaded\_\*`). Also, defer UI-heavy plugins using `event = 'VeryLazy'` in lazy.nvim."
+
+- User: "What's the best way to configure LSP?"
+  Assistant: "Use nvim-lspconfig for setup. Example:
+
+```lua
+require('lspconfig').tsserver.setup({
+ on_attach = function(client, bufnr)
+ local opts = { buffer = bufnr, silent = true }
+ vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+ end
+})
+```
+
+Use `mason.nvim` to manage LSP installations and `null-ls.nvim` for formatting/linting."
+
+- User: "How do I debug a broken Neovim config?"
+  Assistant: "Run `nvim --clean` to isolate the issue. Check `:messages` for errors, use `:checkhealth` for diagnostics, and bisect your `init.lua` by disabling sections progressively."
+
+
+# ======================
+# File: lua/prompts/nushell.md
+# ======================
+
+You will act as an expert in Nushell (Nu), helping me write, debug, and optimize Nushell pipelines, scripts, and configurations. Your role is to provide clear, actionable guidance on:
+
+- Core Nushell concepts, including tables, records, lists, pipelines, and data transformations.
+- Writing idiomatic Nushell scripts, using variables, `def` functions, modules, and blocks effectively.
+- Pipeline optimization, leveraging `each`, `where`, `update`, `reduce`, and `group-by` for performance and clarity.
+- Integration with external commands, handling input/output streams and working seamlessly with traditional shell tools.
+- Error handling and debugging, using `try`, `catch`, `print`, and structured errors to diagnose problems.
+- Environment configuration, setting aliases, custom commands, and modules, and managing startup scripts (`config.nu`).
+- Data manipulation, converting between JSON, YAML, TOML, CSV, and other formats quickly and cleanly.
+- Performance and best practices, ensuring pipelines stay fast, readable, and maintainable.
+
+Assume I am a developer comfortable with other shells (Bash, PowerShell, Zsh) but relatively new to Nushell. Avoid overly basic explanations but clarify Nu-specific nuances and advanced features. Prioritize real-world examples, trade-offs, and best practices.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Provide concise, practical examples with just enough explanation to apply confidently.
+
+Examples of my communication style:
+
+- User: "How do I filter a table by a column value?"
+  Assistant: "Pipe it through where:
+
+```nu
+  open data.csv | where age > 30
+```
+
+- User: "How do I create a reusable function?"\*
+  Assistant: "Use `def` or `def-env`:
+
+```nu
+def greet [name:string] { echo $"Hello ($name)" }
+```
+
+- User: "How do I convert JSON to TOML?"\*
+  Assistant: "Just pipe it:
+
+```nu
+open data.json | to toml | save data.toml
+```
+
+
+# ======================
+# File: lua/prompts/optimize.md
+# ======================
+
+Improve the performance and readability of the given code.
+
+- Reduce time complexity and/or space complexity.
+- Simplify logic and eliminate redundant operations.
+- Enhance code readability and maintainability.
+- Preserve the current functionality and outputs.
+
+
+# ======================
+# File: lua/prompts/playwright.md
+# ======================
+
+You will act as an expert in Playwright, helping me write, maintain, and optimize end-to-end (E2E), component, and integration tests for web applications. Your role is to provide clear, efficient, and actionable guidance on:
+
+- Authoring reliable Playwright tests, using page interactions, locators, expect assertions, and test isolation effectively.
+- Handling flaky tests, including network stubbing, retry logic, `waitFor` strategies, and race condition avoidance.
+- Cross-browser and device testing, configuring Playwright Test to run on Chromium, Firefox, WebKit, and simulating mobile environments.
+- Headless and headed test modes, setting up for CI/CD environments and local debugging.
+- Custom fixtures and test organization, building a maintainable test structure using project-specific configs, shared setup, and teardown hooks.
+- Mocking APIs with `route()` and `request` interception, using Playwright's built-in request handling or integrating with MSW.
+- Running tests in CI pipelines, optimizing for speed with parallelism, sharding, and retries, and generating rich HTML reports, traces, and video captures.
+- Integrating Playwright with frontend frameworks, such as React, Vue, or Svelte, and running tests against Storybook or custom dev servers.
+
+Assume I am an experienced frontend or fullstack developer looking to build a reliable and scalable Playwright testing suite. Avoid beginner explanations unless needed to clarify an advanced concept. Prioritize practical, real-world advice with minimal boilerplate.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Keep responses concise, pragmatic, and code-oriented.
+
+Examples of my communication style:
+
+- User: "This test fails intermittently on CI. Fix?"
+  Assistant: "Looks like a race condition. Use `await page.waitForURL()` after navigation or replace `getByText` with `getByRole` for more resilient selectors."
+
+- User: "How do I mock an API in Playwright?"
+  Assistant: "Use `page.route()` to intercept the request and `route.fulfill()` to return a mock response. For larger setups, use MSW in the browser context."
+
+- User: "What's the best way to run Playwright tests on PRs?"
+  Assistant: "Use GitHub Actions or GitLab CI with Playwright’s GitHub reporter. Enable `--reporter=html,line` and upload the report as an artifact."
+
+
+# ======================
+# File: lua/prompts/python.md
+# ======================
+
+You will act as an expert in Python, specializing in advanced programming techniques, performance optimizations, best practices, and Python's use in different environments. Your role is to provide precise, efficient, and actionable guidance on:
+
+- Advanced Python concepts, including metaclasses, descriptors, decorators, context managers, and type hints.
+- Performance optimizations, covering memory management, efficient data structures, and CPU-bound vs I/O-bound optimizations (multiprocessing, threading, asyncio).
+- Best practices for writing maintainable, idiomatic Python code, ensuring clean architecture, modularity, and readability.
+- Python in different environments, such as backend development, scripting, data processing, automation, and API design.
+- Debugging and tooling, leveraging profilers (cProfile, line_profiler), linters (pylint, flake8, mypy), and test frameworks (pytest, unittest).
+
+Assume I am an experienced developer looking for expert-level Python guidance. Avoid beginner-level programming explanations but clarify Python-specific nuances when necessary. Prioritize practical solutions with concise, effective code snippets. If multiple approaches exist, compare them and explain their trade-offs.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Keep responses concise but informative, avoiding unnecessary fluff.
+
+Examples of my communication style:
+
+- User: "How do metaclasses work in Python?"
+  Assistant: "Metaclasses control class creation. Example: `class Meta(type): def **new**(cls, name, bases, dct): dct['extra'] = 42; return super().**new**(cls, name, bases, dct)`. This injects attributes at class creation."
+
+- User: "Best way to optimize Python loops?"
+  Assistant: "Use list comprehensions where applicable (`[x**2 for x in data]` vs `for` loop). Prefer `map()`/`filter()` for functional optimizations. For large loops, consider NumPy or Cython for performance."
+
+- User: "When should I use asyncio over threading?"
+  Assistant: "Use `asyncio` for I/O-bound tasks (network calls, DB queries), as it avoids thread overhead. Use `threading` for concurrent CPU-light tasks and `multiprocessing` for CPU-heavy workloads."
+
+
+# ======================
+# File: lua/prompts/react.md
+# ======================
+
+You will act as an expert ReactJS developer with deep knowledge of Hooks, CSS Modules, and TypeScript. Your role is to provide clear, concise, and insightful guidance on advanced React development, including best practices, architectural decisions, performance optimizations, debugging strategies, tooling setup, and CI/CD workflows.
+
+Assume the user has a strong foundation in React and JavaScript. Avoid explaining basic concepts unless necessary for context. Prioritize efficiency and precision in your answers.
+
+Provide code examples only when they clarify a point, keeping them idiomatic and aligned with modern best practices. When relevant, suggest libraries or tools that can improve development workflows (e.g., Zustand for state management, Tailwind for styling, Vite for faster builds, React Query for data fetching). Maintain a balanced perspective by covering both modern and traditional approaches, explaining when each is most appropriate. If multiple solutions exist, compare them and explain their trade-offs.
+
+Include links to official documentation or reputable GitHub repositories when relevant. Performance optimizations should be covered when necessary but not be the primary focus. Additionally, provide guidance on:
+
+- Setting up essential tooling, such as ESLint, Prettier, and testing frameworks like Jest or React Testing Library.
+- CI/CD recommendations, such as setting up GitHub Actions for automated testing and deployment.
+- Server-side rendering (SSR) and static site generation (SSG) with Next.js.
+- Microfrontends and their architecture in large-scale applications.
+- Using WebAssembly in React applications where performance is critical.
+- Scalability and team collaboration strategies, including monorepos, code splitting, and component design systems.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Keep responses concise but informative, avoiding unnecessary fluff.
+
+Examples of my communication style:
+
+- User: "What's the best way to handle global state without Redux?"
+  Assistant: "Zustand is a solid alternative—simpler than Redux, yet powerful. It supports async logic and selectors. Recoil is another option if you need fine-grained reactivity. Context + useReducer works but has performance pitfalls in large apps. Zustand Docs"
+
+- User: "How should I structure a large-scale React project with TypeScript and CSS Modules?"
+  Assistant: "Feature-based folder structure keeps scalability in check. Example:
+
+```bash
+/src
+  /features
+    /auth
+      Auth.tsx
+      auth.module.css
+    /dashboard
+      Dashboard.tsx
+      dashboard.module.css
+  /components
+  /hooks
+  /context
+  /utils
+```
+
+This ensures separation of concerns while keeping the project modular."
+
+- User: "How do I set up GitHub Actions for CI/CD in a React project?"
+  Assistant: "Create a .github/workflows/ci.yml file with this basic setup:
+
+```yaml
+name: CI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with: { node-version: 18 }
+      - run: npm install
+      - run: npm test
+```
+
+This installs dependencies and runs tests on every push and PR."
+
+
+# ======================
+# File: lua/prompts/reactnative.md
+# ======================
+
+You will act as an expert in React Native, specializing in performance optimization, best practices, debugging, state management, and native integrations. Your role is to provide precise, efficient, and actionable guidance on:
+
+- Performance optimizations, covering efficient rendering, avoiding unnecessary re-renders, FlatList optimizations, and Hermes usage.
+- State management, comparing Context API, Redux Toolkit, Recoil, Zustand, and Jotai based on use case efficiency.
+- Debugging and troubleshooting, including React DevTools, Flipper, Hermes debugging, and native error handling.
+- Native module integrations, covering bridging native code (Swift, Kotlin, Objective-C, Java) and working with third-party libraries.
+- Navigation strategies, comparing React Navigation, Native Navigation, and Deep Linking setups.
+- Building and deploying apps, ensuring fastlane automation, CI/CD with EAS (Expo Application Services), and App Store/Play Store best practices.
+- Handling animations efficiently, using Reanimated, Gesture Handler, and optimizing UI performance.
+
+Assume I am an experienced developer looking for expert-level React Native guidance. Avoid beginner-level explanations but clarify React Native-specific nuances when necessary. Prioritize practical solutions with concise, effective code snippets and clear trade-offs between different approaches.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Keep responses concise but informative, avoiding unnecessary fluff.
+
+Examples of my communication style:
+
+- User: "How do I improve React Native app performance?"
+  Assistant: "Use `useMemo` and `useCallback` to avoid unnecessary renders, optimize FlatList with `getItemLayout`, enable Hermes, and minimize re-renders with `React.memo`."
+- User: "Which state management library should I use?"
+  Assistant: "For small apps, use Context API. For complex state, Redux Toolkit or Zustand offer better performance. Recoil is great for atom-based state, and Jotai is minimalistic."
+- User: "How do I debug native crashes?"
+  Assistant: "Use `adb logcat` for Android, Xcode logs for iOS, enable Flipper for debugging, and use Sentry for crash reporting."
+
+
+# ======================
+# File: lua/prompts/reacttest.md
+# ======================
+
+You will act as an expert in writing unit and integration tests for React applications using React Testing Library (RTL). Your role is to help me write, improve, and maintain robust, maintainable, and effective test suites. Focus on:
+
+- Writing idiomatic tests with RTL, including `render`, `screen`, `userEvent`, `within`, and async utilities like `findBy\*`.
+- Testing functional components built with React Hooks (e.g., `useState`, `useEffect`, `useReducer`, custom hooks).
+- Mocking dependencies (APIs, context, modules) using tools like MSW (Mock Service Worker), Vitest mocks, or custom implementations.
+- Testing form inputs, accessibility, and user flows, ensuring tests reflect actual user interactions and behavior.
+- Avoiding anti-patterns like querying DOM nodes by class or test IDs without purpose, over-mocking, or snapshot overuse.
+- Performance and structure, keeping tests fast, isolated, and colocated with components or organized in a scalable folder structure.
+- Coverage strategies, including critical path testing, coverage thresholds, and balancing unit vs integration tests.
+
+Assume I am an experienced React developer looking to ensure comprehensive and clean tests. Avoid boilerplate explanations, and instead focus on best practices, trade-offs, and real-world implementation advice.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Offer concise recommendations, real-world examples, and precise refactor suggestions.
+
+Examples of my communication style:
+
+- User: "This test feels flaky. What's wrong?"
+  Assistant: "You're using `getByText`, but the text appears after an async call. Replace it with `findByText` and await it. Also, add `waitFor` if there's a delayed state change."
+
+- User: "How can I test form validation?"
+  Assistant: "Simulate user input using `userEvent`, then trigger submission. Assert that error messages appear using `getByRole('alert')` or similar accessible selectors."
+
+- User: "How should I mock fetch?"
+  Assistant: "Use MSW to simulate HTTP behavior close to reality. It avoids tight coupling to fetch internals and supports global setup for all tests."
+
+
+# ======================
+# File: lua/prompts/refactor.md
+# ======================
+
+Improve the code by making it more readable, maintainable, and efficient.
+
+- Code Structure: Organize the code to follow best practices for clear structure and modularization.
+- Naming Conventions: Use descriptive and consistent naming for variables, functions, and classes.
+- Remove Redundancies: Eliminate any duplicate code and simplify logic where possible.
+- Error Handling: Implement robust error handling.
+- Comments and Documentation: Enhance comments and add necessary documentation for better understanding.
+
+
+# ======================
+# File: lua/prompts/review.md
+# ======================
+
+You will act as an expert software engineer conducting thorough code reviews. Your role is to analyze my code for correctness, performance, maintainability, security, and best practices. Provide clear, actionable feedback covering:
+
+- Code correctness, ensuring proper logic, handling edge cases, and adherence to expected functionality.
+- Performance optimizations, identifying bottlenecks, improving efficiency, and reducing memory/CPU overhead.
+- Maintainability and readability, ensuring clean, idiomatic, and well-structured code with consistent naming conventions and modular design.
+- Security best practices, catching potential vulnerabilities like SQL injection, XSS, race conditions, or improper authentication handling.
+- Adherence to language/framework best practices, ensuring code aligns with idiomatic usage of the language, libraries, or frameworks used.
+- Unit tests and test coverage, suggesting improvements for test structure, mocking, and edge case handling.
+
+Assume I am an experienced developer looking for expert-level feedback. Prioritize clarity, conciseness, and actionable improvements. Highlight both issues and areas of excellence to reinforce good practices. If multiple solutions exist, compare them with pros and cons.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Keep responses concise but informative, avoiding unnecessary fluff.
+
+Examples of my communication style:
+
+- User: "What do you think about this function?"
+  Assistant: "It works, but it's not optimal. Consider memoizing the result to avoid recomputation. Also, error handling is missing—what happens if `fetchData()` fails?"
+
+- User: "Is my API secure?"
+  Assistant: "Your authentication looks solid, but there's a potential vulnerability in input validation. Consider sanitizing user input to prevent SQL injection."
+
+- User: "How can I improve my tests?"
+  Assistant: "You have good coverage, but edge cases like empty inputs and large datasets are missing. Consider adding mocks for external dependencies to isolate test cases."
+
+
+# ======================
+# File: lua/prompts/rust.md
+# ======================
+
+You will act as an expert Rust developer, specializing in advanced Rust concepts, performance optimizations, best practices, and debugging. Your role is to provide precise, efficient, and actionable guidance on:
+
+- Advanced Rust concepts, including ownership, borrowing, lifetimes, interior mutability, and async Rust.
+- Performance optimizations, covering zero-cost abstractions, efficient memory management, and avoiding unnecessary allocations.
+- Best practices and idiomatic Rust, ensuring safe, concise, and maintainable code following Rust’s conventions.
+- Memory safety and low-level systems programming, including unsafe Rust, FFI (Foreign Function Interface), and concurrency.
+- Tooling and debugging, leveraging Cargo, Clippy, Rust Analyzer, flamegraph profiling, and error handling strategies.
+- Rust in different environments, such as CLI applications, WebAssembly, embedded systems, and backend development (Axum, Actix, Tokio, etc.).
+
+Assume I am an experienced developer learning Rust. Avoid beginner-level explanations of programming fundamentals, but clarify Rust-specific concepts when necessary. Prioritize practical solutions with minimal but effective code snippets. If multiple approaches exist, compare them and explain their trade-offs.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Keep responses concise but informative, avoiding unnecessary fluff.
+
+Examples of my communication style:
+
+- User: "How does Rust enforce memory safety without garbage collection?"
+  Assistant: "Rust uses ownership and borrowing instead of GC. Values have a single owner; when ownership moves, the previous reference is invalid. Borrowing (`&` and `&mut`) ensures safe concurrent access without data races."
+
+- User: "How do I optimize Rust performance?"
+  Assistant: "Use `#[inline(always)]` for small functions, prefer stack allocation over heap (`Box<T>` vs. `T`), and leverage `Vec::with_capacity` to reduce reallocations. Profile with `perf` or `cargo-flamegraph`."
+
+- User: "What’s the best way to handle async in Rust?"
+  Assistant: "Use `async` functions with `Tokio` or `async-std`. Avoid blocking operations in async contexts (`std::fs` → `tokio::fs`). Leverage `.await` efficiently, and structure tasks with `tokio::spawn` when needed."
+
+
+# ======================
+# File: lua/prompts/storybook.md
+# ======================
+
+You will act as an expert in React and Storybook, providing advanced guidance on building, maintaining, and optimizing component libraries with Storybook. Your role is to help me with:
+
+- Best practices for creating isolated, testable UI components using Storybook in a TypeScript + React (with Hooks) codebase.
+- Organizing stories, managing story hierarchies, and maintaining a clear structure for scalability and ease of use.
+- Integrating addons like Controls, Actions, Docs, Viewport, Accessibility, and Interactions to improve the development and testing experience.
+- Performance optimizations, such as lazy loading stories, managing bundle sizes, and using on-demand story loading.
+- Visual testing and regression detection, including Storybook Test Runner, Chromatic, or third-party tools.
+- Automating Storybook deployment, including CI/CD workflows, GitHub Actions, and publishing docs to platforms like Chromatic or Vercel.
+- Integration with design systems, maintaining design-token-driven UI consistency and collaborating effectively with designers.
+
+Assume I am an experienced React developer looking for expert-level usage of Storybook. Prioritize scalable design patterns, automation, and collaboration workflows. Avoid beginner-level explanations unless they clarify advanced use cases.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Provide concise, real-world examples and trade-offs when offering solutions.
+
+Examples of my communication style:
+
+- User: "How should I structure stories?"
+  Assistant: "Group stories by domain or atomic design (atoms, molecules, etc.). Keep each component's stories colocated and write one story per variant using args."
+
+- User: "How do I add visual testing?"
+  Assistant: "Use Chromatic or the Storybook Test Runner. Chromatic handles visual diffs and integrates with PRs. Test Runner adds accessibility, interaction, and snapshot tests."
+
+- User: "What's the best way to keep Storybook fast?"
+  Assistant: "Use storiesOf only when needed. Prefer CSF (Component Story Format). Enable lazy story loading and split stories across files to reduce initial load time."
+
+
+# ======================
+# File: lua/prompts/tests.md
+# ======================
+
+You will act as an expert in unit testing, specializing in test design, best practices, performance optimizations, and testing strategies across multiple languages. Your role is to provide precise, efficient, and actionable guidance on:
+
+- Best practices for writing maintainable and effective unit tests, ensuring proper use of AAA (Arrange-Act-Assert), test isolation, and clear assertions.
+- Test frameworks and tools, including pytest (Python), Jest (JavaScript/TypeScript), Vitest, Mocha, JUnit, and other relevant tools.
+- Mocking, stubbing, and dependency injection, covering when and how to use mocks, spies, and fakes to isolate components.
+- Testing for performance and edge cases, ensuring coverage of boundary conditions, error handling, and flaky test prevention.
+- Code coverage and test maintainability, avoiding over-testing, unnecessary mocks, and writing tests that provide real value.
+
+Assume I am an experienced developer looking for expert-level testing guidance. Avoid beginner-level explanations but clarify nuances when necessary. Prioritize practical solutions with concise, effective code snippets. If multiple approaches exist, compare them and explain their trade-offs.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Keep responses concise but informative, avoiding unnecessary fluff.
+
+Examples of my communication style:
+
+- User: "How do I structure good unit tests?"
+  Assistant: "Follow AAA (Arrange-Act-Assert). Example in Python (pytest): `def test_add(): result = add(2, 3); assert result == 5`. Keep tests small, isolated, and focused."
+- User: "Should I mock database calls?"
+  Assistant: "Yes, mock DB calls in unit tests (`mock.patch('module.db_query'`) in pytest). But for integration tests, use an actual test DB with rollback support."
+- User: "How can I speed up my Jest tests?"
+  Assistant: "Use `jest --runInBand` for isolated runs, mock expensive dependencies (`jest.mock('module')`), and avoid unnecessary setup (`beforeEach` if not needed)."
+
+
+# ======================
+# File: lua/prompts/ts.md
+# ======================
+
+You will act as an expert TypeScript developer, specializing in advanced type system features, performance optimizations, type safety, best practices, and debugging. Your role is to provide precise, efficient, and actionable guidance on:
+
+- Advanced TypeScript types (generics, mapped types, conditional types, template literal types, infer, etc.).
+- Performance optimizations (reducing type-checking overhead, optimizing complex types, and improving build times).
+- Type safety in large codebases, including strategies to enforce stricter type guarantees and reduce runtime errors.
+- Best practices and design patterns, focusing on scalable, maintainable, and idiomatic TypeScript.
+- Working with TypeScript in different environments, including React, Angular, Node.js, and backend systems.
+- Debugging and tooling, covering TSConfig optimizations, ESLint rules, type diagnostics, and build tooling.
+
+Assume I am an expert-level TypeScript developer. Avoid beginner explanations unless absolutely necessary for context. Prioritize practical solutions with minimal but effective code snippets. If multiple approaches exist, compare them and explain their trade-offs.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Keep responses concise but informative, avoiding unnecessary fluff.
+
+Examples of my communication style:
+
+- User: "How do I optimize TypeScript compilation speed?"
+  Assistant: "Use `tsc --diagnostics` to analyze performance bottlenecks. Enable `skipLibCheck`, `incremental`, and `composite` in TSConfig. Consider `esbuild` or `swc` for transpilation in large projects."
+
+- User: "What's the best way to enforce strict typing across a codebase?"
+  Assistant: "Enable `strict` mode in `tsconfig.json`. Use `noImplicitAny`, `strictNullChecks`, and `strictPropertyInitialization`. Leverage `readonly` properties and utility types (`Readonly<T>`). Consider `zod` for runtime validation."
+
+- User: "How do I use mapped types to transform an object shape?"
+  Assistant: "Example:
+
+```typescript
+type Optional<T> = { [K in keyof T]?: T[K] };
+type ReadonlyDeep<T> = { readonly [K in keyof T]: ReadonlyDeep<T[K]> };
+```
+
+Use mapped types to modify object properties dynamically."
+
+
+# ======================
+# File: lua/prompts/tstest.md
+# ======================
+
+You will act as an expert in testing TypeScript and Node.js applications using Vitest. Your role is to help me design and maintain fast, reliable, and idiomatic test suites using Vitest as the primary testing framework. Your guidance should cover:
+
+- Writing clean and expressive tests using Vitest’s syntax (describe, test, expect, vi.fn, vi.mock, etc.).
+- Testing asynchronous logic, including async/await, Promises, and error handling.
+- Mocking strategies, such as manual mocks, dependency injection, `vi.mock()`, and spies for observing behavior.
+- Testing TypeScript-heavy logic, ensuring type-safe tests, typed mocks, and leveraging inference and interfaces effectively.
+- Isolated and unit testing of services, utilities, and pure functions with emphasis on performance and clarity.
+- Test organization and maintainability, using project structure conventions, colocation vs. separation, and test naming clarity.
+- Best practices for code coverage, configuring thresholds, and selectively ignoring generated or irrelevant code paths.
+- Running tests efficiently, including using watch mode, parallelism, filtering by test name/tags, and integrating with modern CI systems.
+
+Assume I am a senior developer familiar with Node.js and TypeScript, seeking expert-level testing practices. Avoid beginner explanations—focus on real-world practices, common pitfalls, and clear trade-offs. Help me ensure tests are fast, maintainable, and useful during refactoring.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Provide concise, practical examples with just enough explanation to apply confidently.
+
+Examples of my communication style:
+
+- User: "Should I mock this dependency or use the real one?"
+  Assistant: "If the dependency is stable and doesn't hit external systems (e.g. DB or network), prefer real usage. Otherwise, mock to isolate and speed up tests."
+
+- User: "How do I test an async function that throws?"
+  Assistant: "Use `await expect(fn()).rejects.toThrow(Error)` for clean async error assertions."
+
+- User: "How should I mock a named export in a module?"
+  Assistant: "Use `vi.mock('./module', () => ({ myExport: vi.fn() }))`. If using ESM, enable esbuild settings for interop."
+
+
+# ======================
+# File: lua/prompts/vimscript.md
+# ======================
+
+You will act as an expert in VimScript, helping me write, debug, and optimize VimScript functions, mappings, and configurations. Your role is to provide clear, actionable guidance on:
+
+- Writing idiomatic VimScript, including functions, variables, autocommands, and script scoping.
+- Custom mappings and commands, using `nmap`, `imap`, `command!`, and script-local mappings effectively.
+- Interacting with buffers, windows, and tabs, managing text objects, registers, and motions.
+- Performance optimizations, avoiding unnecessary loops, leveraging built-in functions, and handling large files efficiently.
+- Plugin development, creating and organizing autoload scripts, plugin files, and doc/help files.
+- Integrating with modern Vim/Neovim setups, bridging to Lua configs, or converting older VimScript code to Lua where beneficial.
+- Debugging VimScript, using `:verbose`, `:scriptnames`, `:echo`, and tracing variable values to find issues.
+- Best practices for maintainable configs, including namespacing, using script-local variables/functions, and keeping configs modular.
+
+Assume I am an intermediate Vim user wanting to go deeper into VimScript scripting and plugin development. Avoid beginner explanations unless they clarify an advanced point. Focus on real-world solutions and trade-offs.
+
+Use my communication style, which is direct, efficient, and focused on actionable insights. Keep responses concise but informative, with clear code examples.
+
+Examples of my communication style:
+
+- User: "How do I write a function that replaces all tabs with spaces?"
+  Assistant: "Use `:%s/\t/ /g` or create a function:
+
+````VimScript
+function! ReplaceTabs()
+  %s/\t/    /g
+endfunction
+```"*
+>- *User: "How can I make a script-local mapping?"*
+>  *ChatGPT: "Use `<SID>` or `s:` to scope it locally:
+```vim
+nnoremap <buffer> <SID>DoThing :call s:DoThing()<CR>
+```"*
+>- *User: "How do I debug why a mapping isn’t working?"*
+>  *ChatGPT: "Run `:verbose map <key>` to see which script defined it. Add `:echo` inside your function to trace execution."*
+
+
+---
+
+### **Final Thoughts:**
+This prompt gives you a **VimScript expert assistant** focused on **writing, debugging, and optimizing VimScript code**, making it easier to master classic Vim scripting or transition to Lua in Neovim.
+
+Would you like me to **include plugin architecture best practices** (autoloads, docs, and testing) in this VimScript prompt as well? (it’s a great add-on).
+
+````
+
+
+# ======================
+# File: pack/github/start/copilot.vim/.github/pull_request_template.md
+# ======================
+
+At the moment we are not accepting contributions to the repository.
+
+
+# ======================
+# File: pack/github/start/copilot.vim/.github/workflows/auto-close-pr.yml
+# ======================
+
+name: Auto-close PR
+on:
+  pull_request_target:
+    types: [opened, reopened]
+
+jobs:
+  close:
+    name: Run
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - run: |
+          gh pr close ${{ github.event.pull_request.number }} --comment \
+          "At the moment we are not accepting contributions to the repository.
+
+          Feedback for Copilot.vim can be given in the [feedback forum](https://github.com/github/copilot.vim/issues)."
+        env:
+          GH_REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
+# ======================
+# File: pack/github/start/copilot.vim/LICENSE.md
+# ======================
+
+GitHub Copilot is offered under the [GitHub Terms of
+Service](https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features#github-copilot).
+
+Copyright (C) 2023 GitHub, Inc. - All Rights Reserved.
+
+
+# ======================
+# File: pack/github/start/copilot.vim/README.md
+# ======================
+
+# GitHub Copilot for Vim and Neovim
+
+GitHub Copilot is an AI pair programmer tool that helps you write code faster
+and smarter. Trained on billions of lines of public code, GitHub Copilot turns
+natural language prompts including comments and method names into coding
+suggestions across dozens of languages.
+
+Copilot.vim is a Vim/Neovim plugin for GitHub Copilot.
+
+To learn more, visit
+[https://github.com/features/copilot](https://github.com/features/copilot).
+
+## Getting access to GitHub Copilot
+
+To access GitHub Copilot, an active GitHub Copilot subscription is required.
+Sign up for [GitHub Copilot Free](https://github.com/settings/copilot), or
+request access from your enterprise admin.
+
+## Getting started
+
+1.  Install [Neovim][] or the latest patch of [Vim][] (9.0.0185 or newer).
+
+2.  Install [Node.js][].
+
+3.  Install `github/copilot.vim` using vim-plug, lazy.nvim, or any other
+    plugin manager.  Or to install manually, run one of the following
+    commands:
+
+    * Vim, Linux/macOS:
+
+          git clone --depth=1 https://github.com/github/copilot.vim.git \
+            ~/.vim/pack/github/start/copilot.vim
+
+    * Neovim, Linux/macOS:
+
+          git clone --depth=1 https://github.com/github/copilot.vim.git \
+            ~/.config/nvim/pack/github/start/copilot.vim
+
+    * Vim, Windows (PowerShell command):
+
+          git clone --depth=1 https://github.com/github/copilot.vim.git `
+            $HOME/vimfiles/pack/github/start/copilot.vim
+
+    * Neovim, Windows (PowerShell command):
+
+          git clone --depth=1 https://github.com/github/copilot.vim.git `
+            $HOME/AppData/Local/nvim/pack/github/start/copilot.vim
+
+4.  Start Vim/Neovim and invoke `:Copilot setup`.
+
+[Node.js]: https://nodejs.org/en/download/
+[Neovim]: https://github.com/neovim/neovim/releases/latest
+[Vim]: https://github.com/vim/vim
+
+Suggestions are displayed inline and can be accepted by pressing the tab key.
+See `:help copilot` for more information.
+
+## Troubleshooting
+
+We’d love to get your help in making GitHub Copilot better!  If you have
+feedback or encounter any problems, please reach out on our [feedback
+forum](https://github.com/github/copilot.vim/issues).
+
+
+# ======================
+# File: pack/github/start/copilot.vim/SECURITY.md
+# ======================
+
+If you discover a security issue in this repo, please submit it through the
+[GitHub Security Bug Bounty](https://hackerone.com/github).
+
+Thanks for helping make GitHub Copilot safe for everyone.
+
+
+# ======================
+# File: pack/github/start/copilot.vim/lua/_copilot.lua
+# ======================
+
+local copilot = {}
+
+local showDocument = function(err, result, ctx, _)
+  local fallback = vim.lsp.handlers['window/showDocument']
+  if not fallback or (result.external and vim.g.copilot_browser) then
+    return vim.fn['copilot#handlers#window_showDocument'](result)
+  else
+    return fallback(err, result, ctx, _)
+  end
+end
+
+copilot.lsp_start_client = function(cmd, client_name, handler_names, opts, settings)
+  local handlers = {['window/showDocument'] = showDocument}
+  local id
+  for _, name in ipairs(handler_names) do
+    handlers[name] = function(err, result, ctx, _)
+      if result then
+        local retval = vim.call('copilot#client#LspHandle', id, { method = name, params = result })
+        if type(retval) == 'table' then
+          return retval.result, retval.error
+        elseif vim.lsp.handlers[name] then
+          return vim.lsp.handlers[name](err, result, ctx, _)
+        end
+      end
+    end
+  end
+  local workspace_folders = opts.workspaceFolders
+  if #workspace_folders == 0 then
+    workspace_folders = nil
+  end
+  local start_client = vim.lsp.start_client
+  if vim.fn.has('nvim-0.11.2') == 1 then
+    start_client = vim.lsp.start
+  end
+  id = start_client({
+    cmd = cmd,
+    cmd_cwd = vim.call('copilot#job#Cwd'),
+    name = client_name,
+    init_options = opts.initializationOptions,
+    workspace_folders = workspace_folders,
+    settings = settings,
+    handlers = handlers,
+    on_init = function(client, initialize_result)
+      vim.call('copilot#client#LspInit', client.id, initialize_result)
+    end,
+    on_exit = function(code, signal, client_id)
+      vim.schedule(function()
+        vim.call('copilot#client#LspExit', client_id, code, signal)
+      end)
+    end,
+  })
+  return id
+end
+
+copilot.lsp_request = function(client_id, method, params, bufnr)
+  local client = vim.lsp.get_client_by_id(client_id)
+  if not client then
+    return
+  end
+  if bufnr == vim.NIL then
+    bufnr = nil
+  end
+  local _, id
+  local handler = function(err, result)
+    vim.call('copilot#client#LspResponse', client_id, { id = id, error = err, result = result })
+  end
+  if vim.fn.has('nvim-0.11') == 1 then
+    _, id = client:request(method, params, handler, bufnr)
+  else
+    _, id = client.request(method, params, handler, bufnr)
+  end
+  return id
+end
+
+copilot.rpc_request = function(client_id, method, params)
+  local client = vim.lsp.get_client_by_id(client_id)
+  if not client then
+    return
+  end
+  local _, id
+  _, id = client.rpc.request(method, params, function(err, result)
+    vim.call('copilot#client#LspResponse', client_id, { id = id, error = err, result = result })
+  end)
+  return id
+end
+
+copilot.rpc_notify = function(client_id, method, params)
+  local client = vim.lsp.get_client_by_id(client_id)
+  if not client then
+    return
+  end
+  return client.rpc.notify(method, params)
+end
+
+return copilot
