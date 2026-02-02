@@ -103,6 +103,8 @@ local function setup_lsp()
 
   vim.lsp.enable(lsp_servers)
 end
-
+ vim.api.nvim_command [[autocmd CursorHold   * lua require'utils'.blameVirtText()]]
+ vim.api.nvim_command [[autocmd CursorMoved  * lua require'utils'.clearBlameVirtText()]]
+ vim.api.nvim_command [[autocmd CursorMovedI * lua require'utils'.clearBlameVirtText()]]
 setup_lsp()
 
