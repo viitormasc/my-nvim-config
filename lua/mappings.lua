@@ -129,14 +129,14 @@ local function create_console_log()
 
   local fileType = vim.bo.filetype
 
-  local console 
-  if fileType == "javascript" or fileType== "ts" or fileType =="typescriptreact" or fileType=="javascriptreact" then
-   console = "console.log" 
+  local console
+  if fileType == "javascript" or fileType == "ts" or fileType == "typescriptreact" or fileType == "javascriptreact" then
+    console = "console.log"
   elseif fileType == "go" then
     console = "fmt.Println"
-  elseif fileType == "lua" then 
+  elseif fileType == "lua" then
     console = "log"
-  end 
+  end
 
   -- Get current line number
   --
@@ -467,40 +467,72 @@ map({ 'n', 'v' }, '<leader>a', vim.cmd.SymbolsOutline)
 map({ 'n', 'v' }, '<leader>ç', '<END>a')
 
 
-map('n','<leader>ct','<cmd>Copilot toggle_auto_trigger<CR>', { desc = "Toggle Copilot Auto Trigger" })
+map('n', '<leader>ct', '<cmd>Copilot toggle_auto_trigger<CR>', { desc = "Toggle Copilot Auto Trigger" })
 
 -- nnoremap <F12>f :exe ':silent !firefox %'<CR>
 local _99 = require("99")
-			vim.keymap.set("n", "<leader>9f", function()
-				_99.fill_in_function()
-			end)
-            -- take extra note that i have visual selection only in v mode
-            -- technically whatever your last visual selection is, will be used
-            -- so i have this set to visual mode so i dont screw up and use an
-            -- old visual selection
-            --
-            -- likely ill add a mode check and assert on required visual mode
-            -- so just prepare for it now
-			vim.keymap.set("v", "<leader>9v", function()
-				_99.visual()
-			end)
+vim.keymap.set("n", "<leader>9f", function()
+  _99.fill_in_function()
+end)
+-- take extra note that i have visual selection only in v mode
+-- technically whatever your last visual selection is, will be used
+-- so i have this set to visual mode so i dont screw up and use an
+-- old visual selection
+--
+-- likely ill add a mode check and assert on required visual mode
+-- so just prepare for it now
+vim.keymap.set("v", "<leader>9v", function()
+  _99.visual()
+end)
 
-            --- if you have a request you dont want to make any changes, just cancel it
-			vim.keymap.set("v", "<leader>9s", function()
-				_99.stop_all_requests()
-			end)
+--- if you have a request you dont want to make any changes, just cancel it
+vim.keymap.set("v", "<leader>9s", function()
+  _99.stop_all_requests()
+end)
 
-            --- Example: Using rules + actions for custom behaviors
-            --- Create a rule file like ~/.rules/debug.md that defines custom behavior.
-            --- For instance, a "debug" rule could automatically add printf statements
-            --- throughout a function to help debug its execution flow.
-			vim.keymap.set("n", "<leader>9fd", function()
-				_99.fill_in_function()
-			end)
+--- Example: Using rules + actions for custom behaviors
+--- Create a rule file like ~/.rules/debug.md that defines custom behavior.
+--- For instance, a "debug" rule could automatically add printf statements
+--- throughout a function to help debug its execution flow.
+vim.keymap.set("n", "<leader>9fd", function()
+  _99.fill_in_function()
+end)
 
 
 vim.keymap.set("v", "<leader>fm", function()
   vim.lsp.buf.format({ async = true })
 end, { desc = "Format selection" })
+-- close actual buffer
+map('n', '<leader>x', '<cmd>bp | bd #<CR>')
 
-map('n', '<leader>x','<cmd>bp | bd #<CR>') 
+
+vim.keymap.set("n", "<leader>fp", function()
+  local file_path = vim.fn.expand("%:p")
+
+  -- Find the "programs" directory upward
+  local programs_dir = vim.fs.find("programs", {
+    path = file_path,
+    upward = true,
+    type = "directory",
+  })[1]
+
+  if not programs_dir then
+    vim.notify("Not inside a programs/* directory", vim.log.levels.WARN)
+    return
+  end
+
+  -- Get the program name (directory right after programs/)
+  local relative = file_path:sub(#programs_dir + 2)
+  local program_name = relative:match("([^/]+)/")
+
+  if not program_name then
+    vim.notify("Could not detect program name", vim.log.levels.WARN)
+    return
+  end
+
+  local program_root = programs_dir .. "/" .. program_name
+
+  require("telescope.builtin").live_grep({
+    cwd = program_root,
+  })
+end, { desc = "Live grep (current program)" })
