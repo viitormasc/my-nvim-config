@@ -499,3 +499,8 @@ local _99 = require("99")
 			end)
 
 
+vim.keymap.set("v", "<leader>fm", function()
+  vim.lsp.buf.format({ async = true })
+end, { desc = "Format selection" })
+
+map('n', '<leader>x','<cmd>bp | bd #<CR>') 

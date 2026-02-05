@@ -24,7 +24,8 @@ return {
         ['<S-Tab>'] = { 'select_prev', 'snippet_backward', 'fallback' },
       },
       appearance = {
-        use_nvim_cmp_as_default = true,
+        -- set this to true if you want to use the blink.cmp autocomplete
+        use_nvim_cmp_as_default = false,
         nerd_font_variant = 'mono',
       },
 
@@ -32,5 +33,4 @@ return {
     },
   },
 }
-
 

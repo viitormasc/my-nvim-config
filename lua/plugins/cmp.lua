@@ -22,10 +22,10 @@ return {
 
     -- 🔥 ADD SOURCES HERE
     opts.sources = cmp.config.sources({
-      { name = "99" },          -- ← THIS WAS MISSING
+      -- { name = "99" },          -- ← THIS WAS MISSING
       { name = "nvim_lsp" },
       { name = "luasnip" },
-      { name = "buffer" },
+      -- { name = "buffer" },
       { name = "path" },
     })
   end,
