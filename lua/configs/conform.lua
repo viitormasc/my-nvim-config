@@ -5,15 +5,15 @@ local options = {
     html = { "prettier" },
   },
 
-  format_on_save = function(bufnr)
-    if vim.bo[bufnr].filetype == "lua" then
-      return false
-    end
-    return {
-      timeout_ms = 500,
-      lsp_fallback = true,
-    }
-  end,
+  -- format_on_save = function(bufnr)
+  --   if vim.bo[bufnr].filetype == "lua" then
+  --     return false
+  --   end
+  --   return {
+  --     timeout_ms = 500,
+  --     lsp_fallback = true,
+  --   }
+  -- end,
 }
 
 return options

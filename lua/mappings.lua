@@ -55,15 +55,15 @@ map("n", "]", "o<ESC>")
 vim.fn.setreg("l", "yoconsole.log('^[pa:^[la, ^[pl)")
 
 -- make i start indented
-vim.cmd [[function! IndentWithI()
-    if len(getline('.')) == 0
-        return "\"_cc"
-    else
-        return "i"
-    endif
-endfunction
-nnoremap <expr> i IndentWithI()]]
+vim.keymap.set("n", "i", function()
+  if vim.fn.getline(".") == "" then
+    return '"_cc'
+  else
+    return "i"
+  end
+end, { expr = true })
 
+vim.keymap.set("i", "<CR>", "<CR>", { noremap = true })
 -- replace '' or " " with ``
 
 local function replace_quotes_with_backticks()
@@ -135,7 +135,7 @@ local function create_console_log()
   elseif fileType == "go" then
     console = "fmt.Println"
   elseif fileType == "lua" then
-    console = "log"
+    console = "print"
   end
 
   -- Get current line number
@@ -536,3 +536,11 @@ vim.keymap.set("n", "<leader>fp", function()
     cwd = program_root,
   })
 end, { desc = "Live grep (current program)" })
+
+-- pnpm lint file 
+map({ "n", "i" }, "<leader>lt", function()
+  local file = vim.fn.expand("%:p") -- absolute path
+  vim.cmd("stopinsert")
+  vim.cmd("!pnpm lint --fix " .. vim.fn.shellescape(file))
+end, { desc = "Lint & fix current file (pnpm)" })
+
